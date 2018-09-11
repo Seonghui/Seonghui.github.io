@@ -6,6 +6,8 @@ node_modules
 package.json
 
 ## Jekyll stuff
+/_drafts/
+_drafts/
 /_site/
 _site/
 .sass-cache/
