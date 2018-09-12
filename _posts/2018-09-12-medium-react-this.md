@@ -111,8 +111,8 @@ object.thisFunction() //returns 5
 # 그렇다면 React에서의 this는 무엇을 의미할까요?
 우리가 메소드들을 정의한 컴포넌트 클래스들은 props나 state 같은 클래스 속성들을 참조합니다. 그런데 우리의 메소드가 this.state와 this.props에 접근하려면 this를 해당 메소드에 바인드해야 합니다.
 
-```javascript
-import React, { Component } from ‘react’;
+```
+import React, { Component } from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
