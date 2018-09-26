@@ -46,6 +46,12 @@ yarn start
 yarn add node-sass sass-loader
 ```
 
+## yarn eject 명령어 실행하기
+
+```
+yarn eject
+```
+
 ### webpack 설치하기
 **config/webpack.config.dev.js** 에서 기존 css 설정 복붙한 다음 이렇게 고쳐주기.
 배포를 할 때는 **webpack.config.prod.js**도 같이 고쳐주어야 한다.
