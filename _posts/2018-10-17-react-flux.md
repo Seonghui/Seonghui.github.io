@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] Flux 개념 이해하기"
-tags: [react, Flux]
+tags: [react, flux]
 ---
 > Flux 개념 정리
 
