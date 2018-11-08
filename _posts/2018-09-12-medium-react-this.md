@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[미디엄 번역] React의 'this' 알아보기"
-tags: [react, this, medium]
+title: "[번역] React의 'this' 알아보기"
+tags: [react, this, medium, translation]
 ---
 
 > 해당 포스트는 medium 포스트의 [What is 'this' in React?](https://medium.com/byte-sized-react/what-is-this-in-react-25c62c31480)를 번역한 문서입니다.
