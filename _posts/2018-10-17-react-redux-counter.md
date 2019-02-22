@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] 초심플 카운터 만들기 with Redux"
-tags: [react, redux, study]
+tags: [react, study]
 ---
 > Github에서 코드 확인하기 - [클릭](https://github.com/Seonghui/redux-counter)
 

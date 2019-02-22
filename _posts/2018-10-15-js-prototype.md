@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Javascript] Prototype 정리"
-tags: [javascript, prototype]
+tags: [javascript]
 ---
 > 프로토타입 링크와 프로토타입 오브젝트
 
