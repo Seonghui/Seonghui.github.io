@@ -483,99 +483,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-11-pgs-42841/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-08-11-pgs-42841/" class="post-title-link" itemprop="url">[프로그래머스] 숫자 야구</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
-                    <span itemprop="name">프로그래머스</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-08-11-pgs-42841/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-11-pgs-42841/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42841" target="_blank" rel="noopener">완전 탐색</a></p>
-</blockquote>
-<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
-<li>123~987까지의 리스트를 미리 만듦 (baseball_list)</li>
-<li>baseball_list의 길이만큼 정답 배열(answer)을 만들고 True로 값 초기화</li>
-<li>스트라이크와 볼의 갯수가 같지 않을 경우 정답 배열의 값을 False로 변경</li>
-<li>배열 내에서 True인 것만 필터링해 출력</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(baseball)</span>:</span></span><br><span class="line">    baseball_list = list(permutations([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>], <span class="number">3</span>))</span><br><span class="line">    answer = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(baseball_list)):</span><br><span class="line">        answer.append(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> baseball:</span><br><span class="line">        number = tuple(map(int, list(str(i[<span class="number">0</span>]))))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> index, baseball <span class="keyword">in</span> enumerate(baseball_list):</span><br><span class="line">            ball = <span class="number">0</span></span><br><span class="line">            strike = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> number[<span class="number">0</span>] == baseball[<span class="number">0</span>]:</span><br><span class="line">                strike += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> number[<span class="number">0</span>] == baseball[<span class="number">1</span>] <span class="keyword">or</span> number[<span class="number">0</span>] == baseball[<span class="number">2</span>]:</span><br><span class="line">                ball += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> number[<span class="number">1</span>] == baseball[<span class="number">1</span>]:</span><br><span class="line">                strike += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> number[<span class="number">1</span>] == baseball[<span class="number">0</span>] <span class="keyword">or</span> number[<span class="number">1</span>] == baseball[<span class="number">2</span>]:</span><br><span class="line">                ball += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> number[<span class="number">2</span>] == baseball[<span class="number">2</span>]:</span><br><span class="line">                strike += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> number[<span class="number">2</span>] == baseball[<span class="number">0</span>] <span class="keyword">or</span> number[<span class="number">2</span>] == baseball[<span class="number">1</span>]:</span><br><span class="line">                ball += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> strike != i[<span class="number">1</span>] <span class="keyword">or</span> ball != i[<span class="number">2</span>]:</span><br><span class="line">                answer[index] = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> len(list(filter(<span class="keyword">lambda</span> x: x, answer)))</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-09-js-call-and-invoke/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -673,7 +580,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-20-pgs-42588/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-11-pgs-42841/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -687,7 +594,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2019-08-20-pgs-42588/" class="post-title-link" itemprop="url">[프로그래머스] 탑</a>
+            <a href="/2020/01/20/2019-08-11-pgs-42841/" class="post-title-link" itemprop="url">[프로그래머스] 숫자 야구</a>
         </h1>
 
         <div class="post-meta">
@@ -721,8 +628,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2019-08-20-pgs-42588/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-20-pgs-42588/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2019-08-11-pgs-42841/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-11-pgs-42841/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -738,19 +645,15 @@
 
       
           <blockquote>
-<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42588" target="_blank" rel="noopener">스택/큐</a></p>
+<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42841" target="_blank" rel="noopener">완전 탐색</a></p>
 </blockquote>
 <h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
-<li>스택/큐 문제. 아마 스택으로 풀면 되지 않을까 싶은데 정작 스택으로 안 푼 문제.</li>
-<li>끝에서부터 처음까지 비교해, 만약 앞의 수가 클 경우 인덱스를 정답 배열에 넣고, 그게 아닐 경우 0을 정답 배열에 넣는다.</li>
-<li>역순으로 저장했으니 reverse() 메소드로 정렬한다.</li>
+<li>123~987까지의 리스트를 미리 만듦 (baseball_list)</li>
+<li>baseball_list의 길이만큼 정답 배열(answer)을 만들고 True로 값 초기화</li>
+<li>스트라이크와 볼의 갯수가 같지 않을 경우 정답 배열의 값을 False로 변경</li>
+<li>배열 내에서 True인 것만 필터링해 출력</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(heights)</span>:</span></span><br><span class="line">    length = len(heights)</span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">while</span> length &gt; <span class="number">0</span>:</span><br><span class="line">        length = length - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> heights[length] &lt; heights[i]:</span><br><span class="line">                answer.append(i + <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">and</span> heights[length] &gt;= heights[i]:</span><br><span class="line">                answer.append(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    answer.reverse()</span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
-
-<h2 id="다른-사람의-코드-1"><a href="#다른-사람의-코드-1" class="headerlink" title="다른 사람의 코드 1"></a>다른 사람의 코드 1</h2><ul>
-<li>정답 배열에 길이만큼 0을 먼저 집어넣고, 조건(h[i] &lt; h[j])에 맞을 경우에만 값을 바꿔줬다.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(h)</span>:</span></span><br><span class="line">    ans = [<span class="number">0</span>] * len(h)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(h)<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> h[i] &lt; h[j]:</span><br><span class="line">                ans[i] = j+<span class="number">1</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(baseball)</span>:</span></span><br><span class="line">    baseball_list = list(permutations([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>], <span class="number">3</span>))</span><br><span class="line">    answer = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(baseball_list)):</span><br><span class="line">        answer.append(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> baseball:</span><br><span class="line">        number = tuple(map(int, list(str(i[<span class="number">0</span>]))))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> index, baseball <span class="keyword">in</span> enumerate(baseball_list):</span><br><span class="line">            ball = <span class="number">0</span></span><br><span class="line">            strike = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> number[<span class="number">0</span>] == baseball[<span class="number">0</span>]:</span><br><span class="line">                strike += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> number[<span class="number">0</span>] == baseball[<span class="number">1</span>] <span class="keyword">or</span> number[<span class="number">0</span>] == baseball[<span class="number">2</span>]:</span><br><span class="line">                ball += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> number[<span class="number">1</span>] == baseball[<span class="number">1</span>]:</span><br><span class="line">                strike += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> number[<span class="number">1</span>] == baseball[<span class="number">0</span>] <span class="keyword">or</span> number[<span class="number">1</span>] == baseball[<span class="number">2</span>]:</span><br><span class="line">                ball += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> number[<span class="number">2</span>] == baseball[<span class="number">2</span>]:</span><br><span class="line">                strike += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> number[<span class="number">2</span>] == baseball[<span class="number">0</span>] <span class="keyword">or</span> number[<span class="number">2</span>] == baseball[<span class="number">1</span>]:</span><br><span class="line">                ball += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> strike != i[<span class="number">1</span>] <span class="keyword">or</span> ball != i[<span class="number">2</span>]:</span><br><span class="line">                answer[index] = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> len(list(filter(<span class="keyword">lambda</span> x: x, answer)))</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -855,6 +758,103 @@
 <li>brown 값이 아닌 red 값으로 정답을 찾는 방식</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(brown, red)</span>:</span></span><br><span class="line">    nm = brown + red</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, nm+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> nm%n != <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        m = nm//n</span><br><span class="line">        <span class="keyword">if</span> (n<span class="number">-2</span>)*(m<span class="number">-2</span>) == red:</span><br><span class="line">            <span class="keyword">return</span> sorted([n, m], reverse = <span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-20-pgs-42588/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Step by Step">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-08-20-pgs-42588/" class="post-title-link" itemprop="url">[프로그래머스] 탑</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">프로그래머스</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-08-20-pgs-42588/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-20-pgs-42588/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42588" target="_blank" rel="noopener">스택/큐</a></p>
+</blockquote>
+<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
+<li>스택/큐 문제. 아마 스택으로 풀면 되지 않을까 싶은데 정작 스택으로 안 푼 문제.</li>
+<li>끝에서부터 처음까지 비교해, 만약 앞의 수가 클 경우 인덱스를 정답 배열에 넣고, 그게 아닐 경우 0을 정답 배열에 넣는다.</li>
+<li>역순으로 저장했으니 reverse() 메소드로 정렬한다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(heights)</span>:</span></span><br><span class="line">    length = len(heights)</span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">while</span> length &gt; <span class="number">0</span>:</span><br><span class="line">        length = length - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> heights[length] &lt; heights[i]:</span><br><span class="line">                answer.append(i + <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">and</span> heights[length] &gt;= heights[i]:</span><br><span class="line">                answer.append(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    answer.reverse()</span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
+
+<h2 id="다른-사람의-코드-1"><a href="#다른-사람의-코드-1" class="headerlink" title="다른 사람의 코드 1"></a>다른 사람의 코드 1</h2><ul>
+<li>정답 배열에 길이만큼 0을 먼저 집어넣고, 조건(h[i] &lt; h[j])에 맞을 경우에만 값을 바꿔줬다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(h)</span>:</span></span><br><span class="line">    ans = [<span class="number">0</span>] * len(h)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(h)<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> h[i] &lt; h[j]:</span><br><span class="line">                ans[i] = j+<span class="number">1</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
       
     </div>

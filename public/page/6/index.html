@@ -279,7 +279,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-04-bj-1463/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-07-bj-11726/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -293,7 +293,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-04-bj-1463/" class="post-title-link" itemprop="url">[백준/1463] 1로 만들기</a>
+            <a href="/2020/01/20/2018-10-07-bj-11726/" class="post-title-link" itemprop="url">[백준/11726] 2×n 타일링</a>
         </h1>
 
         <div class="post-meta">
@@ -304,7 +304,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:38" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:40" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -327,8 +327,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-04-bj-1463/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-04-bj-1463/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-07-bj-11726/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-07-bj-11726/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -344,98 +344,17 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1463" target="_blank" rel="noopener">1463</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11726" target="_blank" rel="noopener">11726</a></p>
 </blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><table>
-<thead>
-<tr>
-<th align="left">인덱스</th>
-<th align="left">횟수</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">1</td>
-</tr>
-</tbody></table>
-<p>위 테이블을 보면, 1은 만들 필요가 없으니까 0, 2와 3은 2로 3으로 나누어 떨어지고, 몫이 1이 나오니까 횟수가 1이다. 그렇다면 4부터는 어떻게 구할까?</p>
-<p>| 인덱스 | 횟수 |<br>| 4 | 3, 1 또는 2, 1 |</p>
-<p>4를 1로 만드는 최솟값을 구해야 하는 경우, 4를 1로 뺐을 때 3이 되고, 3의 값은 1이므로 총 두 번이 된다. 하지만 4를 2로 나누는 경우 몫이 2가 되는데, 2의 값은 1이므로 3으로 나누었을 때와 마찬가지로 총 두 번이 된다. 이러나저러나 4를 1로 만드는 최솟값은 2가 되는 것이다.</p>
-<p>| 인덱스 | 횟수 |<br>| 5 | 4, 3, 1 또는 4, 2, 1 |</p>
-<p>다시 5를 예로 들자면, 5는 3이나 2로 나누어 떨어지지 않으므로 <strong>무조건 1을 빼고 시작</strong>해야 한다. 5-1=4인데, 4의 횟수는 아까 구한 2이다. 따라서 5의 최솟값은 <strong>4의 연산 횟수(2) + 빼기 연산(1) = 3</strong>이 된다.</p>
-<p>이렇게 10까지 반복하면 아래와 같은 테이블이 만들어지게 된다.</p>
-<table>
-<thead>
-<tr>
-<th align="left">인덱스</th>
-<th align="left">횟수</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">3, 1 또는 2, 1</td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">4, 3, 1</td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">3, 1 또는 2, 1</td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">6, 3, 1</td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left">4, 3, 1</td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">3, 1</td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">9, 3, 1</td>
-</tr>
-</tbody></table>
-<p>각 인덱스의 최솟값을 담은 배열을 A라고 했을 때, 점화식은 다음과 같다.</p>
-<ul>
-<li>1을 뺐을 때: <code>A[n - 1] + 1</code></li>
-<li>n % 2 == 0일 때: <code>A[n / 2 == 0] + 1</code></li>
-<li>n % 3 == 0일 때: <code>A[n / 3 == 0] + 1</code></li>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>타일링을 하나하나 그려서 깨달음을 얻은 문제.</li>
+<li>전반적인 건 피보나치 수열과 비슷하다.</li>
+<li>맨 앞이 1이 될 경우, 2가 될 경우를 전부 계산하면 된다.</li>
+<li>점화식은 <code>A[n] = A[n-1] + A[n-2]</code></li>
+<li>금방 풀은 줄 알았는데 자꾸 틀렸다고 하길래 보니까 10007로 나눈 나머지를 출력하지 않아서 그런 거였다. 920을 입력할 경우 답이 음수가 나왔는데(오버플로우) 정답에 나누기를 하지 말고 중간에 더할 때부터 나머지 값을 계산했더니 정답이 나왔다.</li>
+<li>다른 사람들이 푼 걸 보니까 for문으로 많이 풀었더라… 나는 피보나치 함수 풀었던 거 재활용하느라 함수를 만들어서 풀었다.</li>
 </ul>
-<p>횟수를 계산해야 하기 때문에 1을 더한다. 각 케이스의 값을 비교해 최소값을 찾아내서 A[n] 배열에 넣어주면 된다.</p>
-<h2 id="Code-JAVA-Bottom-up"><a href="#Code-JAVA-Bottom-up" class="headerlink" title="Code (JAVA) - Bottom-up"></a>Code (JAVA) - Bottom-up</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    arr[<span class="number">0</span>] = arr[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      arr[i] = arr[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; arr[i] &gt; arr[i / <span class="number">2</span>] + <span class="number">1</span>) &#123;</span><br><span class="line">        arr[i] = arr[i / <span class="number">2</span>] + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; arr[i] &gt; arr[i / <span class="number">3</span>] + <span class="number">1</span>) &#123;</span><br><span class="line">        arr[i] = arr[i / <span class="number">3</span>] + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(arr[n]);</span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Code-JAVA-Top-down"><a href="#Code-JAVA-Top-down" class="headerlink" title="Code (JAVA) - Top-down"></a>Code (JAVA) - Top-down</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">int</span>[] dp;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">dp</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(dp[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      dp[n] = dp(n - <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span>(n % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; dp[n] &gt; dp(n / <span class="number">3</span>) + <span class="number">1</span>) &#123;</span><br><span class="line">        dp[n] = dp(n / <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(n % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; dp[n] &gt; dp(n / <span class="number">2</span>) + <span class="number">1</span>) &#123;</span><br><span class="line">        dp[n] = dp(n / <span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(br.readLine());</span><br><span class="line">    dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    System.out.println(dp(N));</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Code-Javascript"><a href="#Code-Javascript" class="headerlink" title="Code (Javascript)"></a>Code (Javascript)</h2><ul>
-<li>역시 백준에서 자바스크립트 입력은… 노우…</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> input = fs.readFileSync(<span class="string">'/dev/stdin'</span>).toString().split(<span class="string">"\n"</span>);</span><br><span class="line"><span class="keyword">var</span> X = <span class="built_in">parseInt</span>(input[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1부터 3까지의 값을 미리 넣어준다.</span></span><br><span class="line"><span class="comment">// 편의를 위해 인덱스는 1부터 시작한다</span></span><br><span class="line"><span class="keyword">let</span> dp = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">4</span>; i &lt;= X; i++) &#123;</span><br><span class="line">  <span class="comment">// -1을 뺄 때, 2로 나눌 때, 3으로 나눌 때의 값을 비교해 최소값을 알아냄</span></span><br><span class="line">  <span class="comment">// -1을 했을 때</span></span><br><span class="line">  dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">  <span class="comment">// 3으로 나누어 떨어지는 수일 때</span></span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">3</span> === <span class="number">0</span>) dp[i] = <span class="built_in">Math</span>.min(dp[i], dp[i / <span class="number">3</span>] + <span class="number">1</span>);</span><br><span class="line">  <span class="comment">// 2로 나누어 떨어지는 수일 때</span></span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span> === <span class="number">0</span>) dp[i] = <span class="built_in">Math</span>.min(dp[i], dp[i / <span class="number">2</span>] + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(dp[X])</span><br></pre></td></tr></table></figure>
-
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">long</span>[] memo;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">tile</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) &#123;</span><br><span class="line">      memo[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> memo[<span class="number">1</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(n == <span class="number">2</span>) &#123;</span><br><span class="line">      memo[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">      <span class="keyword">return</span> memo[<span class="number">2</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(memo[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n] %= <span class="number">10007</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      memo[n] = tile(n - <span class="number">1</span>) + tile(n - <span class="number">2</span>);</span><br><span class="line">      <span class="keyword">return</span> memo[n] %= <span class="number">10007</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> input = Integer.parseInt(bf.readLine());</span><br><span class="line">    memo = <span class="keyword">new</span> <span class="keyword">long</span>[input + <span class="number">1</span>];</span><br><span class="line">    System.out.println(tile(input));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -545,7 +464,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-07-bj-11726/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-12-js-this/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -559,7 +478,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-07-bj-11726/" class="post-title-link" itemprop="url">[백준/11726] 2×n 타일링</a>
+            <a href="/2020/01/20/2018-10-12-js-this/" class="post-title-link" itemprop="url">[Javascript] this 정리</a>
         </h1>
 
         <div class="post-meta">
@@ -570,7 +489,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:40" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:10:40" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -578,8 +497,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
+                  <a href="/categories/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/" itemprop="url" rel="index">
+                    <span itemprop="name">자바스크립트</span>
                   </a>
                 </span>
             </span>
@@ -593,8 +512,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-07-bj-11726/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-07-bj-11726/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-12-js-this/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-12-js-this/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -610,17 +529,29 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11726" target="_blank" rel="noopener">11726</a></p>
+<p>자바스크립트 this 바인딩</p>
 </blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>타일링을 하나하나 그려서 깨달음을 얻은 문제.</li>
-<li>전반적인 건 피보나치 수열과 비슷하다.</li>
-<li>맨 앞이 1이 될 경우, 2가 될 경우를 전부 계산하면 된다.</li>
-<li>점화식은 <code>A[n] = A[n-1] + A[n-2]</code></li>
-<li>금방 풀은 줄 알았는데 자꾸 틀렸다고 하길래 보니까 10007로 나눈 나머지를 출력하지 않아서 그런 거였다. 920을 입력할 경우 답이 음수가 나왔는데(오버플로우) 정답에 나누기를 하지 말고 중간에 더할 때부터 나머지 값을 계산했더니 정답이 나왔다.</li>
-<li>다른 사람들이 푼 걸 보니까 for문으로 많이 풀었더라… 나는 피보나치 함수 풀었던 거 재활용하느라 함수를 만들어서 풀었다.</li>
+<p>자바스크립트의 this는 현재 실행 문맥이다. 여기서 현재 실행 문맥이라는 건 무엇을 뜻할까? 바로 <strong>호출자</strong>를 뜻한다.<br>호출자는 크게 세 가지로 나뉘어진다. 첫 번째는 <strong>객체의 메소드</strong>, 두 번째는 <strong>함수</strong>, 그리고 마지막으로 <strong>생성자 함수</strong>이다. 만약 this가 나온다면 이 세 가지 경우 중 하나이니 누가 호출했는지 보고 this가 어떤 의미를 가지는지를 따져보면 된다. 이를 함수 호출 패턴이라고 하며, 자바스크립트의 this 는 함수 호출 패턴에 따라 this 가 어떤 객체의 this 가 될 지 정해진다. 이를 this 바인딩이라고 한다.<br>바인딩(biding)의 사전적 의미는 묶이다인데, 누가 호출했는지에 따라 this가 호출자에게 묶인다는 의미로 이해하면 그나마 이해하기 쉬워진다.</p>
+<h1 id="1-this-바인딩의-호출-패턴"><a href="#1-this-바인딩의-호출-패턴" class="headerlink" title="1. this 바인딩의 호출 패턴"></a>1. this 바인딩의 호출 패턴</h1><ul>
+<li><strong>객체의 메소드</strong>를 호출할 때의 this 바인딩</li>
+<li><strong>함수</strong>를 호출할 때의 this 바인딩</li>
+<li><strong>생성자 함수</strong>를 호출할 때의 this 바인딩</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">long</span>[] memo;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">tile</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) &#123;</span><br><span class="line">      memo[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> memo[<span class="number">1</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(n == <span class="number">2</span>) &#123;</span><br><span class="line">      memo[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">      <span class="keyword">return</span> memo[<span class="number">2</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(memo[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n] %= <span class="number">10007</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      memo[n] = tile(n - <span class="number">1</span>) + tile(n - <span class="number">2</span>);</span><br><span class="line">      <span class="keyword">return</span> memo[n] %= <span class="number">10007</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> input = Integer.parseInt(bf.readLine());</span><br><span class="line">    memo = <span class="keyword">new</span> <span class="keyword">long</span>[input + <span class="number">1</span>];</span><br><span class="line">    System.out.println(tile(input));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-1-객체의-메소드-호출할-때-this-바인딩"><a href="#1-1-객체의-메소드-호출할-때-this-바인딩" class="headerlink" title="1.1 객체의 메소드 호출할 때 this 바인딩"></a>1.1 객체의 메소드 호출할 때 this 바인딩</h2><p>자신을 호출한 객체에 바인딩이 된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> kim = obj;</span><br><span class="line">kim.name = <span class="string">"kim"</span>;</span><br><span class="line">kim.sayName(); <span class="comment">// "kim"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lee = obj;</span><br><span class="line">lee.name = <span class="string">"lee"</span>;</span><br><span class="line">lee.sayName(); <span class="comment">// "lee"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-함수를-호출할-때-this-바인딩"><a href="#1-2-함수를-호출할-때-this-바인딩" class="headerlink" title="1.2 함수를 호출할 때 this 바인딩"></a>1.2 함수를 호출할 때 this 바인딩</h2><p>전역 객체(window)에 바인딩이 된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> val = <span class="string">"Hello"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.val);</span><br><span class="line">&#125;;</span><br><span class="line">func(); <span class="comment">// "Hello"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.val); <span class="comment">// "Hello"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.val); <span class="comment">//  "Hello"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>하지만 함수 호출에서의 this 바인딩은 내부 함수를 호출할 때도 그대로 적용이 된다. 아래 예제를 보면, 결과가 2,3,4 로 나와야 할 것 같지만 그렇게 나오지 않는다. 왜냐면 자바스크립트가 내부 함수 호출 패턴을 정해놓지 않았기 때문에, 내부 함수도 함수 취급을 받아 이러한 결과가 나온 것이다.<br>따라서 함수 호출 패턴 패턴 규칙에 따라 내부 함수의 this 는 전역 객체(window)에 바인딩된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 전역 변수 value 정의</span></span><br><span class="line"><span class="keyword">var</span> value = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// myObject 객체 생성</span></span><br><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  func1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"func1() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// func2() 내부 함수</span></span><br><span class="line">    func2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"func2() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// func3() 내부 함수</span></span><br><span class="line">      func3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"func3() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      func3(); <span class="comment">// func3() 내부 함수 호출</span></span><br><span class="line">    &#125;;</span><br><span class="line">    func2(); <span class="comment">// func2() 내부 함수 호출</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">myObject.func1(); <span class="comment">// func1() 메소드 호출</span></span><br></pre></td></tr></table></figure>
+
+<p>위와 같은 상황을 피하려면, 부모 함수의 this 를 내부 함수가 접근 가능한 다른 변수에다 저장해야 한다. 보통 this 값을 저장하는 변수의 이름을 that 이라고 짓는다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 내부 함수 this 바인딩</span></span><br><span class="line"><span class="keyword">var</span> value = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  func1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>; <span class="comment">// 부모 함수의 this를 that으로 저장</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"func1() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line"></span><br><span class="line">    func2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      that.value += <span class="number">1</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"func2() called. this.value : "</span> + that.value);</span><br><span class="line"></span><br><span class="line">      func3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        that.value += <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"func3() called. this.value : "</span> + that.value);</span><br><span class="line">      &#125;;</span><br><span class="line">      func3();</span><br><span class="line">    &#125;;</span><br><span class="line">    func2();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">myObject.func1(); <span class="comment">// func1 메소드 호출</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-생성자-함수를-호출할-때-this-바인딩"><a href="#1-3-생성자-함수를-호출할-때-this-바인딩" class="headerlink" title="1.3 생성자 함수를 호출할 때 this 바인딩"></a>1.3 생성자 함수를 호출할 때 this 바인딩</h2><p>new 로 생성자 함수를 생성한 객체에 바인딩이 된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> kim = <span class="keyword">new</span> Person(<span class="string">"kim"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(kim.name); <span class="comment">//kim</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lee = <span class="keyword">new</span> Person(<span class="string">"lee"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(lee.name); <span class="comment">//lee</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -827,7 +758,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-12-js-this/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-04-bj-1463/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -841,7 +772,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-12-js-this/" class="post-title-link" itemprop="url">[Javascript] this 정리</a>
+            <a href="/2020/01/20/2018-10-04-bj-1463/" class="post-title-link" itemprop="url">[백준/1463] 1로 만들기</a>
         </h1>
 
         <div class="post-meta">
@@ -852,7 +783,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:10:40" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:38" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -860,8 +791,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/" itemprop="url" rel="index">
-                    <span itemprop="name">자바스크립트</span>
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
                   </a>
                 </span>
             </span>
@@ -875,8 +806,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-12-js-this/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-12-js-this/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-04-bj-1463/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-04-bj-1463/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -892,28 +823,97 @@
 
       
           <blockquote>
-<p>자바스크립트 this 바인딩</p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1463" target="_blank" rel="noopener">1463</a></p>
 </blockquote>
-<p>자바스크립트의 this는 현재 실행 문맥이다. 여기서 현재 실행 문맥이라는 건 무엇을 뜻할까? 바로 <strong>호출자</strong>를 뜻한다.<br>호출자는 크게 세 가지로 나뉘어진다. 첫 번째는 <strong>객체의 메소드</strong>, 두 번째는 <strong>함수</strong>, 그리고 마지막으로 <strong>생성자 함수</strong>이다. 만약 this가 나온다면 이 세 가지 경우 중 하나이니 누가 호출했는지 보고 this가 어떤 의미를 가지는지를 따져보면 된다. 이를 함수 호출 패턴이라고 하며, 자바스크립트의 this 는 함수 호출 패턴에 따라 this 가 어떤 객체의 this 가 될 지 정해진다. 이를 this 바인딩이라고 한다.<br>바인딩(biding)의 사전적 의미는 묶이다인데, 누가 호출했는지에 따라 this가 호출자에게 묶인다는 의미로 이해하면 그나마 이해하기 쉬워진다.</p>
-<h1 id="1-this-바인딩의-호출-패턴"><a href="#1-this-바인딩의-호출-패턴" class="headerlink" title="1. this 바인딩의 호출 패턴"></a>1. this 바인딩의 호출 패턴</h1><ul>
-<li><strong>객체의 메소드</strong>를 호출할 때의 this 바인딩</li>
-<li><strong>함수</strong>를 호출할 때의 this 바인딩</li>
-<li><strong>생성자 함수</strong>를 호출할 때의 this 바인딩</li>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><table>
+<thead>
+<tr>
+<th align="left">인덱스</th>
+<th align="left">횟수</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<p>위 테이블을 보면, 1은 만들 필요가 없으니까 0, 2와 3은 2로 3으로 나누어 떨어지고, 몫이 1이 나오니까 횟수가 1이다. 그렇다면 4부터는 어떻게 구할까?</p>
+<p>| 인덱스 | 횟수 |<br>| 4 | 3, 1 또는 2, 1 |</p>
+<p>4를 1로 만드는 최솟값을 구해야 하는 경우, 4를 1로 뺐을 때 3이 되고, 3의 값은 1이므로 총 두 번이 된다. 하지만 4를 2로 나누는 경우 몫이 2가 되는데, 2의 값은 1이므로 3으로 나누었을 때와 마찬가지로 총 두 번이 된다. 이러나저러나 4를 1로 만드는 최솟값은 2가 되는 것이다.</p>
+<p>| 인덱스 | 횟수 |<br>| 5 | 4, 3, 1 또는 4, 2, 1 |</p>
+<p>다시 5를 예로 들자면, 5는 3이나 2로 나누어 떨어지지 않으므로 <strong>무조건 1을 빼고 시작</strong>해야 한다. 5-1=4인데, 4의 횟수는 아까 구한 2이다. 따라서 5의 최솟값은 <strong>4의 연산 횟수(2) + 빼기 연산(1) = 3</strong>이 된다.</p>
+<p>이렇게 10까지 반복하면 아래와 같은 테이블이 만들어지게 된다.</p>
+<table>
+<thead>
+<tr>
+<th align="left">인덱스</th>
+<th align="left">횟수</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">3, 1 또는 2, 1</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">4, 3, 1</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">3, 1 또는 2, 1</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">6, 3, 1</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">4, 3, 1</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">3, 1</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">9, 3, 1</td>
+</tr>
+</tbody></table>
+<p>각 인덱스의 최솟값을 담은 배열을 A라고 했을 때, 점화식은 다음과 같다.</p>
+<ul>
+<li>1을 뺐을 때: <code>A[n - 1] + 1</code></li>
+<li>n % 2 == 0일 때: <code>A[n / 2 == 0] + 1</code></li>
+<li>n % 3 == 0일 때: <code>A[n / 3 == 0] + 1</code></li>
 </ul>
-<h2 id="1-1-객체의-메소드-호출할-때-this-바인딩"><a href="#1-1-객체의-메소드-호출할-때-this-바인딩" class="headerlink" title="1.1 객체의 메소드 호출할 때 this 바인딩"></a>1.1 객체의 메소드 호출할 때 this 바인딩</h2><p>자신을 호출한 객체에 바인딩이 된다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> kim = obj;</span><br><span class="line">kim.name = <span class="string">"kim"</span>;</span><br><span class="line">kim.sayName(); <span class="comment">// "kim"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lee = obj;</span><br><span class="line">lee.name = <span class="string">"lee"</span>;</span><br><span class="line">lee.sayName(); <span class="comment">// "lee"</span></span><br></pre></td></tr></table></figure>
+<p>횟수를 계산해야 하기 때문에 1을 더한다. 각 케이스의 값을 비교해 최소값을 찾아내서 A[n] 배열에 넣어주면 된다.</p>
+<h2 id="Code-JAVA-Bottom-up"><a href="#Code-JAVA-Bottom-up" class="headerlink" title="Code (JAVA) - Bottom-up"></a>Code (JAVA) - Bottom-up</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    arr[<span class="number">0</span>] = arr[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      arr[i] = arr[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; arr[i] &gt; arr[i / <span class="number">2</span>] + <span class="number">1</span>) &#123;</span><br><span class="line">        arr[i] = arr[i / <span class="number">2</span>] + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; arr[i] &gt; arr[i / <span class="number">3</span>] + <span class="number">1</span>) &#123;</span><br><span class="line">        arr[i] = arr[i / <span class="number">3</span>] + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(arr[n]);</span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-2-함수를-호출할-때-this-바인딩"><a href="#1-2-함수를-호출할-때-this-바인딩" class="headerlink" title="1.2 함수를 호출할 때 this 바인딩"></a>1.2 함수를 호출할 때 this 바인딩</h2><p>전역 객체(window)에 바인딩이 된다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> val = <span class="string">"Hello"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.val);</span><br><span class="line">&#125;;</span><br><span class="line">func(); <span class="comment">// "Hello"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.val); <span class="comment">// "Hello"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.val); <span class="comment">//  "Hello"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h2 id="Code-JAVA-Top-down"><a href="#Code-JAVA-Top-down" class="headerlink" title="Code (JAVA) - Top-down"></a>Code (JAVA) - Top-down</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">int</span>[] dp;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">dp</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(dp[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      dp[n] = dp(n - <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span>(n % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; dp[n] &gt; dp(n / <span class="number">3</span>) + <span class="number">1</span>) &#123;</span><br><span class="line">        dp[n] = dp(n / <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(n % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; dp[n] &gt; dp(n / <span class="number">2</span>) + <span class="number">1</span>) &#123;</span><br><span class="line">        dp[n] = dp(n / <span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(br.readLine());</span><br><span class="line">    dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    System.out.println(dp(N));</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>하지만 함수 호출에서의 this 바인딩은 내부 함수를 호출할 때도 그대로 적용이 된다. 아래 예제를 보면, 결과가 2,3,4 로 나와야 할 것 같지만 그렇게 나오지 않는다. 왜냐면 자바스크립트가 내부 함수 호출 패턴을 정해놓지 않았기 때문에, 내부 함수도 함수 취급을 받아 이러한 결과가 나온 것이다.<br>따라서 함수 호출 패턴 패턴 규칙에 따라 내부 함수의 this 는 전역 객체(window)에 바인딩된다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 전역 변수 value 정의</span></span><br><span class="line"><span class="keyword">var</span> value = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// myObject 객체 생성</span></span><br><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  func1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"func1() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// func2() 내부 함수</span></span><br><span class="line">    func2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"func2() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// func3() 내부 함수</span></span><br><span class="line">      func3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"func3() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      func3(); <span class="comment">// func3() 내부 함수 호출</span></span><br><span class="line">    &#125;;</span><br><span class="line">    func2(); <span class="comment">// func2() 내부 함수 호출</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">myObject.func1(); <span class="comment">// func1() 메소드 호출</span></span><br></pre></td></tr></table></figure>
-
-<p>위와 같은 상황을 피하려면, 부모 함수의 this 를 내부 함수가 접근 가능한 다른 변수에다 저장해야 한다. 보통 this 값을 저장하는 변수의 이름을 that 이라고 짓는다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 내부 함수 this 바인딩</span></span><br><span class="line"><span class="keyword">var</span> value = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  func1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>; <span class="comment">// 부모 함수의 this를 that으로 저장</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.value += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"func1() called. this.value : "</span> + <span class="keyword">this</span>.value);</span><br><span class="line"></span><br><span class="line">    func2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      that.value += <span class="number">1</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"func2() called. this.value : "</span> + that.value);</span><br><span class="line"></span><br><span class="line">      func3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        that.value += <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"func3() called. this.value : "</span> + that.value);</span><br><span class="line">      &#125;;</span><br><span class="line">      func3();</span><br><span class="line">    &#125;;</span><br><span class="line">    func2();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">myObject.func1(); <span class="comment">// func1 메소드 호출</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="1-3-생성자-함수를-호출할-때-this-바인딩"><a href="#1-3-생성자-함수를-호출할-때-this-바인딩" class="headerlink" title="1.3 생성자 함수를 호출할 때 this 바인딩"></a>1.3 생성자 함수를 호출할 때 this 바인딩</h2><p>new 로 생성자 함수를 생성한 객체에 바인딩이 된다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> kim = <span class="keyword">new</span> Person(<span class="string">"kim"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(kim.name); <span class="comment">//kim</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lee = <span class="keyword">new</span> Person(<span class="string">"lee"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(lee.name); <span class="comment">//lee</span></span><br></pre></td></tr></table></figure>
+<h2 id="Code-Javascript"><a href="#Code-Javascript" class="headerlink" title="Code (Javascript)"></a>Code (Javascript)</h2><ul>
+<li>역시 백준에서 자바스크립트 입력은… 노우…</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> input = fs.readFileSync(<span class="string">'/dev/stdin'</span>).toString().split(<span class="string">"\n"</span>);</span><br><span class="line"><span class="keyword">var</span> X = <span class="built_in">parseInt</span>(input[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1부터 3까지의 값을 미리 넣어준다.</span></span><br><span class="line"><span class="comment">// 편의를 위해 인덱스는 1부터 시작한다</span></span><br><span class="line"><span class="keyword">let</span> dp = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">4</span>; i &lt;= X; i++) &#123;</span><br><span class="line">  <span class="comment">// -1을 뺄 때, 2로 나눌 때, 3으로 나눌 때의 값을 비교해 최소값을 알아냄</span></span><br><span class="line">  <span class="comment">// -1을 했을 때</span></span><br><span class="line">  dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">  <span class="comment">// 3으로 나누어 떨어지는 수일 때</span></span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">3</span> === <span class="number">0</span>) dp[i] = <span class="built_in">Math</span>.min(dp[i], dp[i / <span class="number">3</span>] + <span class="number">1</span>);</span><br><span class="line">  <span class="comment">// 2로 나누어 떨어지는 수일 때</span></span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span> === <span class="number">0</span>) dp[i] = <span class="built_in">Math</span>.min(dp[i], dp[i / <span class="number">2</span>] + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(dp[X])</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1026,7 +1026,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-24-bj-10809/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-24-bj-10808/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1040,7 +1040,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-09-24-bj-10809/" class="post-title-link" itemprop="url">[백준/10809] 알파벳 찾기</a>
+            <a href="/2020/01/20/2018-09-24-bj-10808/" class="post-title-link" itemprop="url">[백준/10808] 알파벳 개수</a>
         </h1>
 
         <div class="post-meta">
@@ -1051,7 +1051,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:19" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:17" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1074,8 +1074,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-09-24-bj-10809/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-24-bj-10809/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-09-24-bj-10808/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-24-bj-10808/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1091,12 +1091,12 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/10809" target="_blank" rel="noopener">10809</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/10808" target="_blank" rel="noopener">10808</a></p>
 </blockquote>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>배열의 값이 -1일때만 배열의 값을 바꿔주면 된다.</li>
+<li>배열 하나 만들고 아스키코드상 a를 배열 인덱스 0으로 만든 다음 해당 문자의 배열값을 증가시키면 되는 문제.</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    String input = sc.next();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] abc = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; abc.length; i++) &#123;</span><br><span class="line">      abc[i] = -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; input.length(); i++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(abc[input.charAt(i) - <span class="string">'a'</span>] == -<span class="number">1</span>) &#123;</span><br><span class="line">        abc[input.charAt(i) - <span class="string">'a'</span>] = i;</span><br><span class="line">      &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; abc.length; i++) &#123;</span><br><span class="line">      System.out.print(abc[i] + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    String input = sc.next();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] abc = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; input.length(); i++) &#123;</span><br><span class="line">      abc[input.charAt(i) - <span class="string">'a'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; abc.length; i++) &#123;</span><br><span class="line">      System.out.print(abc[i] + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
