@@ -188,96 +188,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11722/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2018-10-29-bj-11722/" class="post-title-link" itemprop="url">[백준/11722] 가장 긴 감소하는 부분 수열</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:36" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2018-10-29-bj-11722/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-29-bj-11722/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11722" target="_blank" rel="noopener">11722</a></p>
-</blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>백준 11053 문제를 풀었다면, 부등호 하나만 고쳐서 풀 수 있는 문제이다.</li>
-<li>그래서 그런지 정답률이 꽤 높다.</li>
-</ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++ ) &#123;</span><br><span class="line">      DP[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &lt; A[j]) &#123;</span><br><span class="line">          DP[i] = Math.max(DP[i], DP[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans = Math.max(ans, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(ans);</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-31-bj-1912/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -442,6 +352,103 @@
 <li>무조건 큰 제곱수로 곱해서 구하는 것이 답이 아니다. 따라서 주어진 수를 구할 수 있는 모든 제곱수로 구해 본 다음 최소값을 찾으면 된다.</li>
 </ul>
 <h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] DP= <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      DP[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j * j &lt;= i; j++) &#123;</span><br><span class="line">        DP[i] = Math.min(DP[i], DP[i - j*j] + <span class="number">1</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(DP[N]);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11054/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Step by Step">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-10-29-bj-11054/" class="post-title-link" itemprop="url">[백준/11054] 가장 긴 바이토닉 부분 수열</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 17:39:33" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-10-29-bj-11054/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-29-bj-11054/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11054" target="_blank" rel="noopener">11054</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>이 문제는 가장 긴 증가하는 부분 수열(LIS)을 두 번 활용하면 되는 문제이다.</p>
+<p><img src="/images/bj-11054/image-1.png" alt="result"><br>이렇게 오른쪽, 왼쪽 방향으로 진행하는 LIS의 길이를 구해 각 배열에 저장한 다음, 그 두 배열의 값이 최대가 되는 지점이 바로 정답이 된다.</p>
+<p><img src="/images/bj-11054/image-2.png" alt="result"><br>오른쪽으로 진행하는 LIS의 값은 DP 배열에 저장하고, 왼쪽으로 진행하는 LIS의 값은 R 배열에 저장한다. 따라서 아까 말했듯이, <strong>DP[i]+R[i]로 나온 값들 중의 최대값이 바로 정답</strong>이 되는 것이다.</p>
+<p>그런데 왜 정답은 7인데 더한 값은 8일까? 바로 가운데 값이 중복되기 때문에 그렇다.</p>
+<ul>
+<li>DP배열의 LIS: 1, 2, 3, 4, 5</li>
+<li>R배열의 LIS: 1, 2, 5</li>
+<li>총 길이: 1, 2, 3, 4, <strong>5, 5</strong>, 2, 1</li>
+</ul>
+<p>이렇게 5가 중복이 되기 때문에 1을 빼줘야 정답이 된다.</p>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] R = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans1 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> ans2 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 오른쪽으로 진행</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      DP[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</span><br><span class="line">          DP[i] = Math.max(DP[i], DP[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans1 = Math.max(ans1, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 왼쪽으로 진행</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = N; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">      R[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = N; j &gt;= i; j--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</span><br><span class="line">          R[i] = Math.max(R[i], R[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans2 = Math.max(ans2, R[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 최대값 구하기</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      max = Math.max(DP[i] + R[i], max);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1을 뺀 결과값</span></span><br><span class="line">    System.out.println(max-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -772,6 +779,110 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-24-bj-2156/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Step by Step">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-10-24-bj-2156/" class="post-title-link" itemprop="url">[백준/2156] 포도주 시식</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:21" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-10-24-bj-2156/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-24-bj-2156/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2156" target="_blank" rel="noopener">2156</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li><p>경우는 총 세 가지</p>
+<ol>
+<li>현재 포도주는 마시지 않을 경우</li>
+<li>현재 포도주는 마시고 이전 포도주는 마시지 않은 경우</li>
+<li>현재 포도주와 이전의 포도주를 마신 경우</li>
+</ol>
+</li>
+<li><p>각각의 경우를 점화식으로 나타내면 다음과 같다.</p>
+<ol>
+<li>dp[i - 1]</li>
+<li>wine[i] + dp[i - 2]</li>
+<li>wine[i] + wine[i - 1] + dp[i - 3]</li>
+</ol>
+</li>
+<li><p>여기서 dp[]는 포도주를 마신 최대값이 되고, wine[]은 포도주의 양이다.</p>
+</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b &gt; c) &#123;</span><br><span class="line">      <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(a &gt; c) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> N = sc.nextInt();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] wine = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10001</span>];</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10001</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 배열 초기화</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      wine[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = wine[<span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">2</span>] = dp[<span class="number">1</span>] + wine[<span class="number">2</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 값 비교</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      dp[i] = Max(dp[i-<span class="number">1</span>], wine[i] + dp[i-<span class="number">2</span>], wine[i] + wine[i-<span class="number">1</span>] + dp[i-<span class="number">3</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(dp[N]);</span><br><span class="line">    sc.close();</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-25-bj-2579/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -860,110 +971,6 @@
 </li>
 </ul>
 <h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> N = sc.nextInt();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] stair = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      stair[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 초기화</span></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = stair[<span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">2</span>] = dp[<span class="number">1</span>] + stair[<span class="number">2</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 최대값 찾기</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      dp[i] = Math.max(dp[i-<span class="number">2</span>] + stair[i], dp[i-<span class="number">3</span>] + stair[i-<span class="number">1</span>] + stair[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(dp[N]);</span><br><span class="line">    sc.close();</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-24-bj-2156/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2018-10-24-bj-2156/" class="post-title-link" itemprop="url">[백준/2156] 포도주 시식</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:21" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2018-10-24-bj-2156/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-24-bj-2156/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2156" target="_blank" rel="noopener">2156</a></p>
-</blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li><p>경우는 총 세 가지</p>
-<ol>
-<li>현재 포도주는 마시지 않을 경우</li>
-<li>현재 포도주는 마시고 이전 포도주는 마시지 않은 경우</li>
-<li>현재 포도주와 이전의 포도주를 마신 경우</li>
-</ol>
-</li>
-<li><p>각각의 경우를 점화식으로 나타내면 다음과 같다.</p>
-<ol>
-<li>dp[i - 1]</li>
-<li>wine[i] + dp[i - 2]</li>
-<li>wine[i] + wine[i - 1] + dp[i - 3]</li>
-</ol>
-</li>
-<li><p>여기서 dp[]는 포도주를 마신 최대값이 되고, wine[]은 포도주의 양이다.</p>
-</li>
-</ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b &gt; c) &#123;</span><br><span class="line">      <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(a &gt; c) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> N = sc.nextInt();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] wine = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10001</span>];</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10001</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 배열 초기화</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      wine[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = wine[<span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">2</span>] = dp[<span class="number">1</span>] + wine[<span class="number">2</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 값 비교</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      dp[i] = Max(dp[i-<span class="number">1</span>], wine[i] + dp[i-<span class="number">2</span>], wine[i] + wine[i-<span class="number">1</span>] + dp[i-<span class="number">3</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(dp[N]);</span><br><span class="line">    sc.close();</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
