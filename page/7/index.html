@@ -643,122 +643,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-21-java-plang-4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dev blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2018-09-21-java-plang-4/" class="post-title-link" itemprop="url">[JAVA] 프로그래밍 대회에서 사용하는 자바 - 4</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:10" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA/" itemprop="url" rel="index">
-                    <span itemprop="name">JAVA</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2018-09-21-java-plang-4/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-21-java-plang-4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p><a href="https://code.plus/course/3" target="_blank" rel="noopener">백준 강의</a> 정리 - BigInteger</p>
-</blockquote>
-<h1 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h1><ol>
-<li><a href="#link-1">1. BigInteger</a></li>
-<li><a href="#link-2">2. 기본 사용 방법</a></li>
-<li><a href="#link-3">3. 여러가지 사칙 연산</a></li>
-<li><a href="#link-4">4. 입력 받기</a></li>
-<li><a href="#link-5">5. 같은 값인지 판단하기</a></li>
-<li><a href="#link-6">6. 예시1 - 큰 수 A+B</a></li>
-<li><a href="#link-7">7. 예시1 - a^b</a></li>
-</ol>
-<h2 id="1-BigInteger"><a href="#1-BigInteger" class="headerlink" title="1. BigInteger"></a><a id="link-1"></a>1. BigInteger</h2><ul>
-<li>큰 정수를 나타낼 때 사용하는 클래스</li>
-<li><code>java.math.*;</code> 에 들어있음.</li>
-<li>자바에서만 존재하는 자료구조이다.</li>
-</ul>
-<h2 id="2-기본-사용-방법"><a href="#2-기본-사용-방법" class="headerlink" title="2. 기본 사용 방법"></a><a id="link-2"></a>2. 기본 사용 방법</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a = <span class="keyword">new</span> BigInteger(<span class="string">"10000"</span>);</span><br><span class="line">BigInteger b = <span class="keyword">new</span> BigInteger(<span class="string">"1000"</span>);</span><br><span class="line"><span class="comment">// a+b와 같은 연산이 되지않기 때문에 덧셈은 아래와 같이 처리</span></span><br><span class="line">BigInteger c = a.add(b);</span><br><span class="line">System.out.println(<span class="string">"a = "</span> + a);</span><br><span class="line">System.out.println(<span class="string">"b = "</span> + b);</span><br><span class="line">System.out.println(<span class="string">"c = "</span> + c);</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-여러가지-사칙-연산"><a href="#3-여러가지-사칙-연산" class="headerlink" title="3. 여러가지 사칙 연산"></a><a id="link-3"></a>3. 여러가지 사칙 연산</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"a+b = "</span> + a.add(b)); <span class="comment">//덧셈</span></span><br><span class="line">System.out.println(<span class="string">"a-b = "</span> + a.subtract(b)); <span class="comment">//뺄셈</span></span><br><span class="line">System.out.println(<span class="string">"a*b = "</span> + a.multiply(b)); <span class="comment">//곱하기</span></span><br><span class="line">System.out.println(<span class="string">"a/b = "</span> + a.divide(b)); <span class="comment">//나누기</span></span><br><span class="line">System.out.println(<span class="string">"a%b = "</span> + a.remainder(b)); <span class="comment">//나머지</span></span><br><span class="line">System.out.println(<span class="string">"gcd(a,b) = "</span> + a.gcd(b)); <span class="comment">//최대공약수</span></span><br><span class="line">System.out.println(<span class="string">"-a = "</span> + a.negate()); <span class="comment">//부호 변경</span></span><br><span class="line">System.out.println(<span class="string">"a^10 = "</span> + a.pow(<span class="number">10</span>)); <span class="comment">//제곱</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 0, 1, 10은 따로 만들 필요 없이 바로 사용할 수 있음</span></span><br><span class="line">System.out.println(<span class="string">"ZERO = "</span> + BigInteger.ZERO);</span><br><span class="line">System.out.println(<span class="string">"ONE = "</span> + BigInteger.ONE);</span><br><span class="line">System.out.println(<span class="string">"TEN = "</span> + BigInteger.TEN);</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-입력-받기"><a href="#4-입력-받기" class="headerlink" title="4. 입력 받기"></a><a id="link-4"></a>4. 입력 받기</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a = sc.nextBigInteger();</span><br><span class="line">BigInteger b = sc.nextBigInteger();</span><br><span class="line"><span class="keyword">int</span> c = a.compareTo(b);</span><br><span class="line"><span class="keyword">if</span> (c &lt; <span class="number">0</span>) &#123; <span class="comment">// 음수</span></span><br><span class="line">  System.out.println(<span class="string">"&lt;"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="number">0</span>) &#123; <span class="comment">// 0</span></span><br><span class="line">  System.out.println(<span class="string">"=="</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">// 크다</span></span><br><span class="line">  System.out.println(<span class="string">"&gt;"</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"compareTo = "</span> + c);</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-같은-값인지-판단하기"><a href="#5-같은-값인지-판단하기" class="headerlink" title="5. 같은 값인지 판단하기"></a><a id="link-5"></a>5. 같은 값인지 판단하기</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> e = a.equals(b);</span><br><span class="line"><span class="keyword">if</span> (e) &#123;</span><br><span class="line">  System.out.println(<span class="string">"=="</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  System.out.println(<span class="string">"!="</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"equals = "</span> + e);</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-예시1-큰-수-A-B"><a href="#6-예시1-큰-수-A-B" class="headerlink" title="6. 예시1 - 큰 수 A+B"></a><a id="link-6"></a>6. 예시1 - <a href="https://www.acmicpc.net/problem/10757" target="_blank" rel="noopener">큰 수 A+B</a></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    BigInteger a, b;</span><br><span class="line">    a = sc.nextBigInteger();</span><br><span class="line">    b = sc.nextBigInteger();</span><br><span class="line">    System.out.println(a.add(b));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7-예시2-a-b"><a href="#7-예시2-a-b" class="headerlink" title="7. 예시2 - a^b"></a><a id="link-7"></a>7. 예시2 - <a href="https://www.acmicpc.net/problem/10827" target="_blank" rel="noopener">a^b</a></h2><ul>
-<li>여기서 a는 실수가 된다.</li>
-<li>실수 a와 정수 b가 주어졌을 때 어떻게 정확하게 할까?</li>
-<li>BigDecimal을 사용하면 된다.</li>
-<li>toString()을 사용하면 정확한 값을 출력할 수 없다. toPlainString()을 사용하자.</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    BigDecimal a = sc.nextBigDecimal();</span><br><span class="line">    <span class="keyword">int</span> b = sc.nextInt();</span><br><span class="line">    BigDecimal c = a.pow(b);</span><br><span class="line">    System.out.println(c.toPlainString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-22-bj-1978/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -920,6 +804,122 @@
 <li>또 출력 형식 때문에 삽질함… ㅜ ㅜ</li>
 </ul>
 <h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    </span><br><span class="line">    String[] line = bf.readLine().split(<span class="string">" "</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(line[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">int</span> m = Integer.parseInt(line[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=n; i++) &#123;</span><br><span class="line">      queue.offer(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(n--&gt;<span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (m-<span class="number">1</span>); i++) &#123;</span><br><span class="line">        queue.offer(queue.poll());</span><br><span class="line">      &#125;</span><br><span class="line">      sb.append(queue.poll() + <span class="string">", "</span>);</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    System.out.print(<span class="string">"&lt;"</span> + sb.toString().substring(<span class="number">0</span>,sb.length()-<span class="number">2</span>) + <span class="string">"&gt;"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-21-java-plang-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-21-java-plang-4/" class="post-title-link" itemprop="url">[JAVA] 프로그래밍 대회에서 사용하는 자바 - 4</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:10" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-21-java-plang-4/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-21-java-plang-4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><a href="https://code.plus/course/3" target="_blank" rel="noopener">백준 강의</a> 정리 - BigInteger</p>
+</blockquote>
+<h1 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h1><ol>
+<li><a href="#link-1">1. BigInteger</a></li>
+<li><a href="#link-2">2. 기본 사용 방법</a></li>
+<li><a href="#link-3">3. 여러가지 사칙 연산</a></li>
+<li><a href="#link-4">4. 입력 받기</a></li>
+<li><a href="#link-5">5. 같은 값인지 판단하기</a></li>
+<li><a href="#link-6">6. 예시1 - 큰 수 A+B</a></li>
+<li><a href="#link-7">7. 예시1 - a^b</a></li>
+</ol>
+<h2 id="1-BigInteger"><a href="#1-BigInteger" class="headerlink" title="1. BigInteger"></a><a id="link-1"></a>1. BigInteger</h2><ul>
+<li>큰 정수를 나타낼 때 사용하는 클래스</li>
+<li><code>java.math.*;</code> 에 들어있음.</li>
+<li>자바에서만 존재하는 자료구조이다.</li>
+</ul>
+<h2 id="2-기본-사용-방법"><a href="#2-기본-사용-방법" class="headerlink" title="2. 기본 사용 방법"></a><a id="link-2"></a>2. 기본 사용 방법</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a = <span class="keyword">new</span> BigInteger(<span class="string">"10000"</span>);</span><br><span class="line">BigInteger b = <span class="keyword">new</span> BigInteger(<span class="string">"1000"</span>);</span><br><span class="line"><span class="comment">// a+b와 같은 연산이 되지않기 때문에 덧셈은 아래와 같이 처리</span></span><br><span class="line">BigInteger c = a.add(b);</span><br><span class="line">System.out.println(<span class="string">"a = "</span> + a);</span><br><span class="line">System.out.println(<span class="string">"b = "</span> + b);</span><br><span class="line">System.out.println(<span class="string">"c = "</span> + c);</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-여러가지-사칙-연산"><a href="#3-여러가지-사칙-연산" class="headerlink" title="3. 여러가지 사칙 연산"></a><a id="link-3"></a>3. 여러가지 사칙 연산</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"a+b = "</span> + a.add(b)); <span class="comment">//덧셈</span></span><br><span class="line">System.out.println(<span class="string">"a-b = "</span> + a.subtract(b)); <span class="comment">//뺄셈</span></span><br><span class="line">System.out.println(<span class="string">"a*b = "</span> + a.multiply(b)); <span class="comment">//곱하기</span></span><br><span class="line">System.out.println(<span class="string">"a/b = "</span> + a.divide(b)); <span class="comment">//나누기</span></span><br><span class="line">System.out.println(<span class="string">"a%b = "</span> + a.remainder(b)); <span class="comment">//나머지</span></span><br><span class="line">System.out.println(<span class="string">"gcd(a,b) = "</span> + a.gcd(b)); <span class="comment">//최대공약수</span></span><br><span class="line">System.out.println(<span class="string">"-a = "</span> + a.negate()); <span class="comment">//부호 변경</span></span><br><span class="line">System.out.println(<span class="string">"a^10 = "</span> + a.pow(<span class="number">10</span>)); <span class="comment">//제곱</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 0, 1, 10은 따로 만들 필요 없이 바로 사용할 수 있음</span></span><br><span class="line">System.out.println(<span class="string">"ZERO = "</span> + BigInteger.ZERO);</span><br><span class="line">System.out.println(<span class="string">"ONE = "</span> + BigInteger.ONE);</span><br><span class="line">System.out.println(<span class="string">"TEN = "</span> + BigInteger.TEN);</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-입력-받기"><a href="#4-입력-받기" class="headerlink" title="4. 입력 받기"></a><a id="link-4"></a>4. 입력 받기</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a = sc.nextBigInteger();</span><br><span class="line">BigInteger b = sc.nextBigInteger();</span><br><span class="line"><span class="keyword">int</span> c = a.compareTo(b);</span><br><span class="line"><span class="keyword">if</span> (c &lt; <span class="number">0</span>) &#123; <span class="comment">// 음수</span></span><br><span class="line">  System.out.println(<span class="string">"&lt;"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="number">0</span>) &#123; <span class="comment">// 0</span></span><br><span class="line">  System.out.println(<span class="string">"=="</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">// 크다</span></span><br><span class="line">  System.out.println(<span class="string">"&gt;"</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"compareTo = "</span> + c);</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-같은-값인지-판단하기"><a href="#5-같은-값인지-판단하기" class="headerlink" title="5. 같은 값인지 판단하기"></a><a id="link-5"></a>5. 같은 값인지 판단하기</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> e = a.equals(b);</span><br><span class="line"><span class="keyword">if</span> (e) &#123;</span><br><span class="line">  System.out.println(<span class="string">"=="</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  System.out.println(<span class="string">"!="</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"equals = "</span> + e);</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-예시1-큰-수-A-B"><a href="#6-예시1-큰-수-A-B" class="headerlink" title="6. 예시1 - 큰 수 A+B"></a><a id="link-6"></a>6. 예시1 - <a href="https://www.acmicpc.net/problem/10757" target="_blank" rel="noopener">큰 수 A+B</a></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    BigInteger a, b;</span><br><span class="line">    a = sc.nextBigInteger();</span><br><span class="line">    b = sc.nextBigInteger();</span><br><span class="line">    System.out.println(a.add(b));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-예시2-a-b"><a href="#7-예시2-a-b" class="headerlink" title="7. 예시2 - a^b"></a><a id="link-7"></a>7. 예시2 - <a href="https://www.acmicpc.net/problem/10827" target="_blank" rel="noopener">a^b</a></h2><ul>
+<li>여기서 a는 실수가 된다.</li>
+<li>실수 a와 정수 b가 주어졌을 때 어떻게 정확하게 할까?</li>
+<li>BigDecimal을 사용하면 된다.</li>
+<li>toString()을 사용하면 정확한 값을 출력할 수 없다. toPlainString()을 사용하자.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    BigDecimal a = sc.nextBigDecimal();</span><br><span class="line">    <span class="keyword">int</span> b = sc.nextInt();</span><br><span class="line">    BigDecimal c = a.pow(b);</span><br><span class="line">    System.out.println(c.toPlainString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 

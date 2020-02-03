@@ -188,294 +188,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-04-boj-7568/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dev blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-08-04-boj-7568/" class="post-title-link" itemprop="url">[백준/7568] 덩치</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:01" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-08-04-boj-7568/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-04-boj-7568/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/7568" target="_blank" rel="noopener">7568</a></p>
-</blockquote>
-<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
-<li>리스트 정렬해서 풀다가 이건 아니다 싶어서 전수 비교</li>
-<li>음 그런데 다른 분이 짠 코드 보니까 for문을 리스트 길이로 돌린 게 뻘짓</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">N = int(input())</span><br><span class="line">dungchi_list = []</span><br><span class="line">answer = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">    dungchi_list.append(list(map(int, input().split())))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(dungchi_list)): <span class="comment"># 현재 덩치</span></span><br><span class="line">    count = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(dungchi_list)): <span class="comment"># 비교할 덩치들</span></span><br><span class="line">        <span class="keyword">if</span> dungchi_list[i][<span class="number">0</span>] &lt; dungchi_list[j][<span class="number">0</span>]: <span class="comment"># 몸무게도 크고</span></span><br><span class="line">            <span class="keyword">if</span> dungchi_list[i][<span class="number">1</span>] &lt; dungchi_list[j][<span class="number">1</span>]: <span class="comment"># 키도 크다면</span></span><br><span class="line">                count = count + <span class="number">1</span></span><br><span class="line">    answer.append(count)</span><br><span class="line"></span><br><span class="line">print(<span class="string">' '</span>.join(map(str, answer)))</span><br></pre></td></tr></table></figure>
-
-<h2 id="References-1-출처"><a href="#References-1-출처" class="headerlink" title="References 1 (출처)"></a>References 1 <a href="https://claude-u.tistory.com/122" target="_blank" rel="noopener">(출처)</a></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num_student = int(input())</span><br><span class="line">student_list = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(num_student):</span><br><span class="line">    weight, height = map(int, input().split())</span><br><span class="line">    student_list.append((weight, height))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> student_list:</span><br><span class="line">    rank = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> student_list:</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">0</span>] &lt; j[<span class="number">0</span>] <span class="keyword">and</span> i[<span class="number">1</span>] &lt; j[<span class="number">1</span>]:</span><br><span class="line">                rank += <span class="number">1</span></span><br><span class="line">    print(rank, end = <span class="string">" "</span>)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-06-boj-2231/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dev blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-08-06-boj-2231/" class="post-title-link" itemprop="url">[백준/2231] 분해합</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:04" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-08-06-boj-2231/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-06-boj-2231/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2231" target="_blank" rel="noopener">2231</a></p>
-</blockquote>
-<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
-<li>예외처리를 잘못해서 두 번이나 틀린 문제..~ 분해합이 없을 경우의 처리를 해줘야 한다.</li>
-<li>어차피 분해합의 생성자는 분해합보다 작다. 고로 입력값(N)까지만 비교하면 됨.</li>
-<li>입력값(N)까지 비교했음에도 분해합을 찾지 못하고, <code>i == N</code>이 되면 그냥 0을 출력하면 된다.</li>
-<li>문제 이해 잘못해서 슬랙방에 이상한 질문이나 남기고… 아진짜닉변하고싶다…</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">N = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, N + <span class="number">1</span>):</span><br><span class="line">    hap = <span class="number">0</span></span><br><span class="line">    number = i</span><br><span class="line">    <span class="keyword">while</span> number != <span class="number">0</span>:</span><br><span class="line">        rest = int(number % <span class="number">10</span>)</span><br><span class="line">        hap += rest</span><br><span class="line">        number = int(number/<span class="number">10</span>)</span><br><span class="line">    hap += i</span><br><span class="line">    <span class="keyword">if</span> hap == N:</span><br><span class="line">        print(i)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> i == N:</span><br><span class="line">        print(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="References-1-출처"><a href="#References-1-출처" class="headerlink" title="References 1 (출처)"></a>References 1 <a href="https://claude-u.tistory.com/116" target="_blank" rel="noopener">(출처)</a></h2><ul>
-<li>자릿수 하나하나 배열에 넣어서 더함</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num = int(input())</span><br><span class="line">answer = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, num+<span class="number">1</span>):</span><br><span class="line">    coef_num_list = list(map(int, str(i)))</span><br><span class="line">    answer = i + sum(coef_num_list)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> answer == num:</span><br><span class="line">        print(i)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i == num:</span><br><span class="line">        print(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-20-pgs-42588/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dev blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-08-20-pgs-42588/" class="post-title-link" itemprop="url">[프로그래머스] 탑</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
-                    <span itemprop="name">프로그래머스</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-08-20-pgs-42588/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-20-pgs-42588/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42588" target="_blank" rel="noopener">스택/큐</a></p>
-</blockquote>
-<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
-<li>스택/큐 문제. 아마 스택으로 풀면 되지 않을까 싶은데 정작 스택으로 안 푼 문제.</li>
-<li>끝에서부터 처음까지 비교해, 만약 앞의 수가 클 경우 인덱스를 정답 배열에 넣고, 그게 아닐 경우 0을 정답 배열에 넣는다.</li>
-<li>역순으로 저장했으니 reverse() 메소드로 정렬한다.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(heights)</span>:</span></span><br><span class="line">    length = len(heights)</span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">while</span> length &gt; <span class="number">0</span>:</span><br><span class="line">        length = length - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> heights[length] &lt; heights[i]:</span><br><span class="line">                answer.append(i + <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">and</span> heights[length] &gt;= heights[i]:</span><br><span class="line">                answer.append(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    answer.reverse()</span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
-
-<h2 id="다른-사람의-코드-1"><a href="#다른-사람의-코드-1" class="headerlink" title="다른 사람의 코드 1"></a>다른 사람의 코드 1</h2><ul>
-<li>정답 배열에 길이만큼 0을 먼저 집어넣고, 조건(h[i] &lt; h[j])에 맞을 경우에만 값을 바꿔줬다.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(h)</span>:</span></span><br><span class="line">    ans = [<span class="number">0</span>] * len(h)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(h)<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> h[i] &lt; h[j]:</span><br><span class="line">                ans[i] = j+<span class="number">1</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-06-boj-4673/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -667,6 +379,295 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-08-pgs-42839/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-08-08-pgs-42839/" class="post-title-link" itemprop="url">[프로그래머스] 소수 찾기</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">프로그래머스</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-08-08-pgs-42839/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-08-pgs-42839/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42839" target="_blank" rel="noopener">연습 문제</a></p>
+</blockquote>
+<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
+<li>완전탐색(Brute-Force)</li>
+<li>itertools 없었으면 절대 못 풀었을 문제다. 그저 갓이썬…</li>
+<li><code>itertools.permutation</code>로 모든 숫자의 조합을 구해 리스트에 저장.</li>
+<li>숫자 조합 리스트의 최대값까지의 소수를 찾는다. 소수는 에라토스테네스의 체를 활용해서 찾으면 된다.</li>
+<li>소수 리스트와 숫자 조합 리스트의 합집합을 구하고 길이를 리턴한다.</li>
+<li>다음에는 itertools 없이 풀어봐야겠다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sieve</span><span class="params">(n)</span>:</span></span><br><span class="line">    num=set(range(<span class="number">2</span>,n+<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> i <span class="keyword">in</span> num:</span><br><span class="line">            num-=set(range(<span class="number">2</span>*i,n+<span class="number">1</span>,i))</span><br><span class="line">    <span class="keyword">return</span> num</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(numbers)</span>:</span></span><br><span class="line">    numbers_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(numbers) + <span class="number">1</span>):</span><br><span class="line">        numbers_list += list(map(<span class="string">''</span>.join, itertools.permutations(numbers,i)))</span><br><span class="line"></span><br><span class="line">    numbers_list = set(map(int, numbers_list))</span><br><span class="line">    prime_list = sieve(max(numbers_list))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> len(numbers_list &amp; prime_list)</span><br></pre></td></tr></table></figure>
+
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://programmers.co.kr/learn/courses/4008/lessons/12836" target="_blank" rel="noopener">순열과 조합 - combinations, permutations</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-20-pgs-42588/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-08-20-pgs-42588/" class="post-title-link" itemprop="url">[프로그래머스] 탑</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">프로그래머스</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-08-20-pgs-42588/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-20-pgs-42588/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42588" target="_blank" rel="noopener">스택/큐</a></p>
+</blockquote>
+<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
+<li>스택/큐 문제. 아마 스택으로 풀면 되지 않을까 싶은데 정작 스택으로 안 푼 문제.</li>
+<li>끝에서부터 처음까지 비교해, 만약 앞의 수가 클 경우 인덱스를 정답 배열에 넣고, 그게 아닐 경우 0을 정답 배열에 넣는다.</li>
+<li>역순으로 저장했으니 reverse() 메소드로 정렬한다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(heights)</span>:</span></span><br><span class="line">    length = len(heights)</span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">while</span> length &gt; <span class="number">0</span>:</span><br><span class="line">        length = length - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> heights[length] &lt; heights[i]:</span><br><span class="line">                answer.append(i + <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">and</span> heights[length] &gt;= heights[i]:</span><br><span class="line">                answer.append(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    answer.reverse()</span><br><span class="line">    <span class="keyword">return</span> answer</span><br></pre></td></tr></table></figure>
+
+<h2 id="다른-사람의-코드-1"><a href="#다른-사람의-코드-1" class="headerlink" title="다른 사람의 코드 1"></a>다른 사람의 코드 1</h2><ul>
+<li>정답 배열에 길이만큼 0을 먼저 집어넣고, 조건(h[i] &lt; h[j])에 맞을 경우에만 값을 바꿔줬다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(h)</span>:</span></span><br><span class="line">    ans = [<span class="number">0</span>] * len(h)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(h)<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> h[i] &lt; h[j]:</span><br><span class="line">                ans[i] = j+<span class="number">1</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-04-boj-7568/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-08-04-boj-7568/" class="post-title-link" itemprop="url">[백준/7568] 덩치</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:01" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-08-04-boj-7568/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-04-boj-7568/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/7568" target="_blank" rel="noopener">7568</a></p>
+</blockquote>
+<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
+<li>리스트 정렬해서 풀다가 이건 아니다 싶어서 전수 비교</li>
+<li>음 그런데 다른 분이 짠 코드 보니까 for문을 리스트 길이로 돌린 게 뻘짓</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">N = int(input())</span><br><span class="line">dungchi_list = []</span><br><span class="line">answer = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">    dungchi_list.append(list(map(int, input().split())))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(dungchi_list)): <span class="comment"># 현재 덩치</span></span><br><span class="line">    count = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(dungchi_list)): <span class="comment"># 비교할 덩치들</span></span><br><span class="line">        <span class="keyword">if</span> dungchi_list[i][<span class="number">0</span>] &lt; dungchi_list[j][<span class="number">0</span>]: <span class="comment"># 몸무게도 크고</span></span><br><span class="line">            <span class="keyword">if</span> dungchi_list[i][<span class="number">1</span>] &lt; dungchi_list[j][<span class="number">1</span>]: <span class="comment"># 키도 크다면</span></span><br><span class="line">                count = count + <span class="number">1</span></span><br><span class="line">    answer.append(count)</span><br><span class="line"></span><br><span class="line">print(<span class="string">' '</span>.join(map(str, answer)))</span><br></pre></td></tr></table></figure>
+
+<h2 id="References-1-출처"><a href="#References-1-출처" class="headerlink" title="References 1 (출처)"></a>References 1 <a href="https://claude-u.tistory.com/122" target="_blank" rel="noopener">(출처)</a></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num_student = int(input())</span><br><span class="line">student_list = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(num_student):</span><br><span class="line">    weight, height = map(int, input().split())</span><br><span class="line">    student_list.append((weight, height))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> student_list:</span><br><span class="line">    rank = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> student_list:</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">0</span>] &lt; j[<span class="number">0</span>] <span class="keyword">and</span> i[<span class="number">1</span>] &lt; j[<span class="number">1</span>]:</span><br><span class="line">                rank += <span class="number">1</span></span><br><span class="line">    print(rank, end = <span class="string">" "</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-09-js-call-and-invoke/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -745,6 +746,97 @@
 <h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
 <li><a href="https://stackoverflow.com/questions/50884893/calling-vs-invoking-a-function" target="_blank" rel="noopener">Calling vs invoking a function</a></li>
 </ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-09-25-boj-1260/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-09-25-boj-1260/" class="post-title-link" itemprop="url">[백준/1260] DFS와 BFS</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:14" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-09-25-boj-1260/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-09-25-boj-1260/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1260" target="_blank" rel="noopener">1260</a></p>
+</blockquote>
+<ul>
+<li>BFS는 쉽게 했는데 DFS에서 삽질을 많이 했다. 자꾸 1&gt;4&gt;3&gt;2가 출력되길래…</li>
+<li>작은 노드부터 탐색을 해야하기 때문에, dfs 함수 내에서 작은 노드부터 탐색할 수 있게끔 자식 노드를 정렬해 스택에 넣어줘야 한다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(v)</span>:</span></span><br><span class="line">    stack = []</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 스택과 visited 리스트에 루트 노드 추가</span></span><br><span class="line">    visited = [v]</span><br><span class="line">    <span class="comment"># 작은 노드부터 탐색해야하기 때문에 정렬</span></span><br><span class="line">    stack.extend(reversed(adj[v]))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        <span class="comment"># 제일 위에 있는 노드 꺼내기</span></span><br><span class="line">        node = stack.pop()</span><br><span class="line">        <span class="comment"># 해당 노드가 방문하지 않은 노드일 경우</span></span><br><span class="line">        <span class="keyword">if</span> node <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">            <span class="comment"># 해당 노드를 visited 리스트에 추가</span></span><br><span class="line">            visited.append(node)</span><br><span class="line">            <span class="comment"># 해당 노드의 자식노드를 스택에 추가</span></span><br><span class="line">            <span class="comment"># 작은 노드부터 탐색해야하기 때문에 정렬</span></span><br><span class="line">            stack.extend(reversed(adj[node]))</span><br><span class="line">    <span class="keyword">return</span> visited</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bfs</span><span class="params">(v)</span>:</span></span><br><span class="line">    queue = collections.deque()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 큐와 visited 리스트에 루트 노드 추가</span></span><br><span class="line">    visited = [v]</span><br><span class="line">    queue += adj[v]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> queue:</span><br><span class="line">        <span class="comment"># 먼저 큐에 들어가있던 노드 꺼내기</span></span><br><span class="line">        node = queue.popleft()</span><br><span class="line">        <span class="comment"># 해당 노드가 방문하지 않은 노드일 경우</span></span><br><span class="line">        <span class="keyword">if</span> node <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">            <span class="comment"># 해당 노드의 자식노드를 큐에 추가</span></span><br><span class="line">            queue += adj[node]</span><br><span class="line">            <span class="comment"># 해당 노드를 visited 리스트에 추가</span></span><br><span class="line">            visited.append(node)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> visited</span><br><span class="line"></span><br><span class="line">N, M, V = (map(int, input().split()))</span><br><span class="line"></span><br><span class="line">adj = [[] <span class="keyword">for</span> _ <span class="keyword">in</span> range(N+<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(M):</span><br><span class="line">    a, b = (map(int, input().split()))</span><br><span class="line">    adj[a].append(b)</span><br><span class="line">    adj[b].append(a)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 정점 번호가 작은 순대로 정렬</span></span><br><span class="line">    adj[a].sort()</span><br><span class="line">    adj[b].sort()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 배열을 문자열로 변환</span></span><br><span class="line">answer1 = <span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> dfs(V))</span><br><span class="line">answer2 = <span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> bfs(V))</span><br><span class="line"></span><br><span class="line">print(answer1)</span><br><span class="line">print(answer2)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -868,7 +960,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-09-25-boj-1260/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-07-23-pgs-12933/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -882,7 +974,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2019-09-25-boj-1260/" class="post-title-link" itemprop="url">[백준/1260] DFS와 BFS</a>
+            <a href="/2020/01/20/2019-07-23-pgs-12933/" class="post-title-link" itemprop="url">[프로그래머스] 정수 내림차순으로 배치하기</a>
         </h1>
 
         <div class="post-meta">
@@ -893,7 +985,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:14" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -901,8 +993,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
+                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">프로그래머스</span>
                   </a>
                 </span>
             </span>
@@ -916,8 +1008,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2019-09-25-boj-1260/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-09-25-boj-1260/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2019-07-23-pgs-12933/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-07-23-pgs-12933/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -933,13 +1025,12 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1260" target="_blank" rel="noopener">1260</a></p>
+<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/12933" target="_blank" rel="noopener">연습 문제</a></p>
 </blockquote>
-<ul>
-<li>BFS는 쉽게 했는데 DFS에서 삽질을 많이 했다. 자꾸 1&gt;4&gt;3&gt;2가 출력되길래…</li>
-<li>작은 노드부터 탐색을 해야하기 때문에, dfs 함수 내에서 작은 노드부터 탐색할 수 있게끔 자식 노드를 정렬해 스택에 넣어줘야 한다.</li>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>리스트를 문자열로 형변환한 다음 리스트로 만들어 정렬해 다시 숫자로 만들면 되는 문제</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(v)</span>:</span></span><br><span class="line">    stack = []</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 스택과 visited 리스트에 루트 노드 추가</span></span><br><span class="line">    visited = [v]</span><br><span class="line">    <span class="comment"># 작은 노드부터 탐색해야하기 때문에 정렬</span></span><br><span class="line">    stack.extend(reversed(adj[v]))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        <span class="comment"># 제일 위에 있는 노드 꺼내기</span></span><br><span class="line">        node = stack.pop()</span><br><span class="line">        <span class="comment"># 해당 노드가 방문하지 않은 노드일 경우</span></span><br><span class="line">        <span class="keyword">if</span> node <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">            <span class="comment"># 해당 노드를 visited 리스트에 추가</span></span><br><span class="line">            visited.append(node)</span><br><span class="line">            <span class="comment"># 해당 노드의 자식노드를 스택에 추가</span></span><br><span class="line">            <span class="comment"># 작은 노드부터 탐색해야하기 때문에 정렬</span></span><br><span class="line">            stack.extend(reversed(adj[node]))</span><br><span class="line">    <span class="keyword">return</span> visited</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bfs</span><span class="params">(v)</span>:</span></span><br><span class="line">    queue = collections.deque()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 큐와 visited 리스트에 루트 노드 추가</span></span><br><span class="line">    visited = [v]</span><br><span class="line">    queue += adj[v]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> queue:</span><br><span class="line">        <span class="comment"># 먼저 큐에 들어가있던 노드 꺼내기</span></span><br><span class="line">        node = queue.popleft()</span><br><span class="line">        <span class="comment"># 해당 노드가 방문하지 않은 노드일 경우</span></span><br><span class="line">        <span class="keyword">if</span> node <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">            <span class="comment"># 해당 노드의 자식노드를 큐에 추가</span></span><br><span class="line">            queue += adj[node]</span><br><span class="line">            <span class="comment"># 해당 노드를 visited 리스트에 추가</span></span><br><span class="line">            visited.append(node)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> visited</span><br><span class="line"></span><br><span class="line">N, M, V = (map(int, input().split()))</span><br><span class="line"></span><br><span class="line">adj = [[] <span class="keyword">for</span> _ <span class="keyword">in</span> range(N+<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(M):</span><br><span class="line">    a, b = (map(int, input().split()))</span><br><span class="line">    adj[a].append(b)</span><br><span class="line">    adj[b].append(a)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 정점 번호가 작은 순대로 정렬</span></span><br><span class="line">    adj[a].sort()</span><br><span class="line">    adj[b].sort()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 배열을 문자열로 변환</span></span><br><span class="line">answer1 = <span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> dfs(V))</span><br><span class="line">answer2 = <span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> bfs(V))</span><br><span class="line"></span><br><span class="line">print(answer1)</span><br><span class="line">print(answer2)</span><br></pre></td></tr></table></figure>
+<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(n)</span>:</span></span><br><span class="line">    arr = list(str(n))</span><br><span class="line">    arr.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">return</span> int(<span class="string">''</span>.join(arr))</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1044,97 +1135,6 @@
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
 <li><a href="https://dojang.io/mod/page/view.php?id=2179" target="_blank" rel="noopener">코딩도장 - 파이썬 입력 값을 변수 두 개에 저장하기</a></li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-07-26-pgs-12943/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dev blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-07-26-pgs-12943/" class="post-title-link" itemprop="url">[프로그래머스] 콜라츠 추측</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
-                    <span itemprop="name">프로그래머스</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-07-26-pgs-12943/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-07-26-pgs-12943/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/12943" target="_blank" rel="noopener">연습 문제</a></p>
-</blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>1일 경우를 처리해줘야 한다.</li>
-<li>1일 경우 0번 반복이니 0을 리턴하면 됨.</li>
-</ul>
-<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(num)</span>:</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> num != <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            num = num / <span class="number">2</span></span><br><span class="line">        <span class="keyword">elif</span> num % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">            num = num * <span class="number">3</span> + <span class="number">1</span></span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> count == <span class="number">500</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
 
       
     </div>

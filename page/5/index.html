@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11722/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-31-bj-1912/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -202,7 +202,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-29-bj-11722/" class="post-title-link" itemprop="url">[백준/11722] 가장 긴 감소하는 부분 수열</a>
+            <a href="/2020/01/20/2018-10-31-bj-1912/" class="post-title-link" itemprop="url">[백준/1912] 연속합</a>
         </h1>
 
         <div class="post-meta">
@@ -213,7 +213,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:36" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:39" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,8 +236,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-29-bj-11722/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-29-bj-11722/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-31-bj-1912/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-31-bj-1912/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -253,13 +253,16 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11722" target="_blank" rel="noopener">11722</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1912" target="_blank" rel="noopener">1912</a></p>
 </blockquote>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>백준 11053 문제를 풀었다면, 부등호 하나만 고쳐서 풀 수 있는 문제이다.</li>
-<li>그래서 그런지 정답률이 꽤 높다.</li>
+<li>이전까지 더한 값+현재값과 현재값을 비교해 더 큰 값이 DP[]에 들어가고, 이전까지의 최대값(max)과 현재의 DP[] 값을 비교해 더 큰 값이 max 변수에 들어가면 된다.</li>
+<li>따라서 점화식은 <code>DP[i] = max(DP[i-1] + A[i], A[i])</code></li>
+<li>그런데… 왜 맞는데… 틀리지?</li>
+<li>그건 내가 max 변수의 값을 0으로 초기화했기 때문임</li>
+<li>초기화 잘못해서 네 번 틀린 사람 나야 나 나야 나</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++ ) &#123;</span><br><span class="line">      DP[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &lt; A[j]) &#123;</span><br><span class="line">          DP[i] = Math.max(DP[i], DP[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans = Math.max(ans, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(ans);</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> max;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    DP[<span class="number">1</span>] = A[<span class="number">1</span>];</span><br><span class="line">    max = A[<span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      DP[i] = Math.max(DP[i - <span class="number">1</span>] + A[i], A[i]);</span><br><span class="line">      max = Math.max(max, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(max);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -367,7 +370,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-31-bj-1912/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11054/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -381,7 +384,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-31-bj-1912/" class="post-title-link" itemprop="url">[백준/1912] 연속합</a>
+            <a href="/2020/01/20/2018-10-29-bj-11054/" class="post-title-link" itemprop="url">[백준/11054] 가장 긴 바이토닉 부분 수열</a>
         </h1>
 
         <div class="post-meta">
@@ -392,7 +395,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:39" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 17:39:33" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -415,8 +418,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-31-bj-1912/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-31-bj-1912/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-29-bj-11054/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-29-bj-11054/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -432,16 +435,20 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1912" target="_blank" rel="noopener">1912</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11054" target="_blank" rel="noopener">11054</a></p>
 </blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>이전까지 더한 값+현재값과 현재값을 비교해 더 큰 값이 DP[]에 들어가고, 이전까지의 최대값(max)과 현재의 DP[] 값을 비교해 더 큰 값이 max 변수에 들어가면 된다.</li>
-<li>따라서 점화식은 <code>DP[i] = max(DP[i-1] + A[i], A[i])</code></li>
-<li>그런데… 왜 맞는데… 틀리지?</li>
-<li>그건 내가 max 변수의 값을 0으로 초기화했기 때문임</li>
-<li>초기화 잘못해서 네 번 틀린 사람 나야 나 나야 나</li>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>이 문제는 가장 긴 증가하는 부분 수열(LIS)을 두 번 활용하면 되는 문제이다.</p>
+<p><img src="/images/bj-11054/image-1.png" alt="result"><br>이렇게 오른쪽, 왼쪽 방향으로 진행하는 LIS의 길이를 구해 각 배열에 저장한 다음, 그 두 배열의 값이 최대가 되는 지점이 바로 정답이 된다.</p>
+<p><img src="/images/bj-11054/image-2.png" alt="result"><br>오른쪽으로 진행하는 LIS의 값은 DP 배열에 저장하고, 왼쪽으로 진행하는 LIS의 값은 R 배열에 저장한다. 따라서 아까 말했듯이, <strong>DP[i]+R[i]로 나온 값들 중의 최대값이 바로 정답</strong>이 되는 것이다.</p>
+<p>그런데 왜 정답은 7인데 더한 값은 8일까? 바로 가운데 값이 중복되기 때문에 그렇다.</p>
+<ul>
+<li>DP배열의 LIS: 1, 2, 3, 4, 5</li>
+<li>R배열의 LIS: 1, 2, 5</li>
+<li>총 길이: 1, 2, 3, 4, <strong>5, 5</strong>, 2, 1</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> max;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    DP[<span class="number">1</span>] = A[<span class="number">1</span>];</span><br><span class="line">    max = A[<span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      DP[i] = Math.max(DP[i - <span class="number">1</span>] + A[i], A[i]);</span><br><span class="line">      max = Math.max(max, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(max);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이렇게 5가 중복이 되기 때문에 1을 빼줘야 정답이 된다.</p>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] R = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans1 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> ans2 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 오른쪽으로 진행</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      DP[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</span><br><span class="line">          DP[i] = Math.max(DP[i], DP[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans1 = Math.max(ans1, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 왼쪽으로 진행</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = N; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">      R[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = N; j &gt;= i; j--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</span><br><span class="line">          R[i] = Math.max(R[i], R[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans2 = Math.max(ans2, R[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 최대값 구하기</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      max = Math.max(DP[i] + R[i], max);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1을 뺀 결과값</span></span><br><span class="line">    System.out.println(max-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -552,7 +559,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-25-bj-2579/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-15-bj-10844/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -566,7 +573,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-25-bj-2579/" class="post-title-link" itemprop="url">[백준/2579] 계단 오르기</a>
+            <a href="/2020/01/20/2018-10-15-bj-10844/" class="post-title-link" itemprop="url">[백준/10844] 쉬운 계단 수</a>
         </h1>
 
         <div class="post-meta">
@@ -577,7 +584,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:24" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:56" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -600,8 +607,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-25-bj-2579/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-25-bj-2579/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-15-bj-10844/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-15-bj-10844/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -617,29 +624,17 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2579" target="_blank" rel="noopener">2579</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/10844" target="_blank" rel="noopener">10844</a></p>
 </blockquote>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li><p>포도주 시식이랑 비슷한 문제.</p>
-</li>
-<li><p>포도주 시식이랑 다른 점은 무조건 마지막 칸을 밟아야 한다는 것이다.</p>
-</li>
-<li><p>경우는 총 두 가지 - 마지막 칸을 밟았을 때</p>
-<ol>
-<li>이전 계단을 밟지 않은 경우</li>
-<li>이전 계단을 밟을 경우</li>
-</ol>
-</li>
-<li><p>각각의 경우를 점화식으로 나타내면 다음과 같다.</p>
-<ol>
-<li>dp[i] = dp[i-2] + stair[i]</li>
-<li>dp[i] = dp[i-3] + stair[i] + stair[i-2]</li>
-</ol>
-</li>
-<li><p>여기서 dp[]는 점수의 최대값이 되고, stair[]는 계단의 점수다.</p>
-</li>
+<li>쉽게 말하자면 끝수-1을 변수 j라고 했을 때, 계단수는 j+1, j-1이 됨.</li>
+<li>예를 들어 자릿수가 3이고 27의 계단수를 구한다고 했을 때, 계단수는 27(7-1), 27(7+1)로 각 276, 278이 된다.</li>
+<li>구하려는 끝수를 변수 i이라고 한다면, 점화식은 다음과 같다.</li>
+<li><code>dp[i][j] = dp[i-1][j-1] + dp[i-1][j+1]</code></li>
+<li>시작이 0일 경우, 끝이 9일 경우의 처리를 반드시 해주어야 한다.</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> N = sc.nextInt();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] stair = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      stair[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 초기화</span></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = stair[<span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">2</span>] = dp[<span class="number">1</span>] + stair[<span class="number">2</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 최대값 찾기</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      dp[i] = Math.max(dp[i-<span class="number">2</span>] + stair[i], dp[i-<span class="number">3</span>] + stair[i-<span class="number">1</span>] + stair[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(dp[N]);</span><br><span class="line">    sc.close();</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">101</span>][<span class="number">10</span>];</span><br><span class="line">    BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(br.readLine());</span><br><span class="line">    <span class="keyword">int</span> MOD = <span class="number">1000000000</span>;</span><br><span class="line">    <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">      dp[<span class="number">1</span>][i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">0</span>) &#123;</span><br><span class="line">          dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">1</span>] % MOD;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(j == <span class="number">9</span>) &#123;</span><br><span class="line">          dp[i][<span class="number">9</span>] = dp[i - <span class="number">1</span>][<span class="number">8</span>] % MOD;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          dp[i][j] = (dp[i - <span class="number">1</span>][j - <span class="number">1</span>] + dp[i - <span class="number">1</span>][j + <span class="number">1</span>]) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">      sum += dp[n][i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(sum % MOD);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -784,7 +779,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-15-bj-10844/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-25-bj-2579/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -798,7 +793,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-10-15-bj-10844/" class="post-title-link" itemprop="url">[백준/10844] 쉬운 계단 수</a>
+            <a href="/2020/01/20/2018-10-25-bj-2579/" class="post-title-link" itemprop="url">[백준/2579] 계단 오르기</a>
         </h1>
 
         <div class="post-meta">
@@ -809,7 +804,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:56" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:24" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -832,8 +827,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-10-15-bj-10844/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-15-bj-10844/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-25-bj-2579/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-25-bj-2579/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -849,17 +844,29 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/10844" target="_blank" rel="noopener">10844</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2579" target="_blank" rel="noopener">2579</a></p>
 </blockquote>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>쉽게 말하자면 끝수-1을 변수 j라고 했을 때, 계단수는 j+1, j-1이 됨.</li>
-<li>예를 들어 자릿수가 3이고 27의 계단수를 구한다고 했을 때, 계단수는 27(7-1), 27(7+1)로 각 276, 278이 된다.</li>
-<li>구하려는 끝수를 변수 i이라고 한다면, 점화식은 다음과 같다.</li>
-<li><code>dp[i][j] = dp[i-1][j-1] + dp[i-1][j+1]</code></li>
-<li>시작이 0일 경우, 끝이 9일 경우의 처리를 반드시 해주어야 한다.</li>
+<li><p>포도주 시식이랑 비슷한 문제.</p>
+</li>
+<li><p>포도주 시식이랑 다른 점은 무조건 마지막 칸을 밟아야 한다는 것이다.</p>
+</li>
+<li><p>경우는 총 두 가지 - 마지막 칸을 밟았을 때</p>
+<ol>
+<li>이전 계단을 밟지 않은 경우</li>
+<li>이전 계단을 밟을 경우</li>
+</ol>
+</li>
+<li><p>각각의 경우를 점화식으로 나타내면 다음과 같다.</p>
+<ol>
+<li>dp[i] = dp[i-2] + stair[i]</li>
+<li>dp[i] = dp[i-3] + stair[i] + stair[i-2]</li>
+</ol>
+</li>
+<li><p>여기서 dp[]는 점수의 최대값이 되고, stair[]는 계단의 점수다.</p>
+</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">101</span>][<span class="number">10</span>];</span><br><span class="line">    BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(br.readLine());</span><br><span class="line">    <span class="keyword">int</span> MOD = <span class="number">1000000000</span>;</span><br><span class="line">    <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">      dp[<span class="number">1</span>][i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">0</span>) &#123;</span><br><span class="line">          dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">1</span>] % MOD;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(j == <span class="number">9</span>) &#123;</span><br><span class="line">          dp[i][<span class="number">9</span>] = dp[i - <span class="number">1</span>][<span class="number">8</span>] % MOD;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          dp[i][j] = (dp[i - <span class="number">1</span>][j - <span class="number">1</span>] + dp[i - <span class="number">1</span>][j + <span class="number">1</span>]) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">      sum += dp[n][i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(sum % MOD);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> N = sc.nextInt();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] stair = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      stair[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 초기화</span></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = stair[<span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">2</span>] = dp[<span class="number">1</span>] + stair[<span class="number">2</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 최대값 찾기</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      dp[i] = Math.max(dp[i-<span class="number">2</span>] + stair[i], dp[i-<span class="number">3</span>] + stair[i-<span class="number">1</span>] + stair[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(dp[N]);</span><br><span class="line">    sc.close();</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1109,7 +1116,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-28-bj-2747/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-01-bj-9095/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1123,7 +1130,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-09-28-bj-2747/" class="post-title-link" itemprop="url">[백준/2747] 피보나치 수</a>
+            <a href="/2020/01/20/2018-10-01-bj-9095/" class="post-title-link" itemprop="url">[백준/9095] 1, 2, 3 더하기</a>
         </h1>
 
         <div class="post-meta">
@@ -1134,7 +1141,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:07:33" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 17:39:25" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1157,8 +1164,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-09-28-bj-2747/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-28-bj-2747/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-10-01-bj-9095/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-01-bj-9095/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1174,21 +1181,14 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2747" target="_blank" rel="noopener">2747</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/9095" target="_blank" rel="noopener">9095</a></p>
 </blockquote>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>본격 DP 들어가기 전에 한번 풀어본 문제.</li>
-<li>메모이제이션으로 풀었는데도 시간 초과가 떠서 당황하게 만들었던 문제다.</li>
-<li>알고 보니 내 코드에 문제가 있는 거였음. 역시 컴파일러는 거짓말을 안 한다… ㅜ</li>
-<li>일단 전역으로 배열 선언한 다음 메인 함수에서 초기화를 해준다.</li>
-<li>이때 입력값보다 1을 더해서 배열의 크기를 정해주어야 한다.</li>
-<li>예를 들어 0부터 10까지의 피보나치 수열을 구한다면, 배열의 크기는 0~10까지인 총 11이 되어야 하기 때문이다.</li>
-<li>그리고 피보나치 수열을 구하는 함수에서 배열에 값을 넣어주면 된다.</li>
-<li>나는 배열을 지역 변수로 선언했다가 시간 초과를 보았다… ㅡㅡ;;</li>
-<li>사실 1003 문제 풀고 싶었는데… 온갖 삽질로 시간 초과만 보다가 결국 풀지 못했다.</li>
-<li>1003은 다음 기회에… 꼭 플고 만다.</li>
+<li>각 앞자리 수에 1,2,3이 나올 경우를 생각하면 된다. 예를 들어 숫자 4는 3을 만들었을 때의 경우의 수, 2를 만들었을 때의 경우의 수, 1을 만들었을 때의 경우의 수를 전부 추가하면 된다.<br><img src="/images/bj-9095/example.png" alt="example"></li>
+<li>점화식으로 나타내면 이렇다. <strong>A[n] = A[n-3] + A[n-2] + A[n-1]</strong></li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">int</span>[] memo;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">      memo[n] = n;</span><br><span class="line">      <span class="keyword">return</span> n;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (memo[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n] = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> input = Integer.parseInt(bf.readLine());</span><br><span class="line">    memo = <span class="keyword">new</span> <span class="keyword">int</span>[input + <span class="number">1</span>];</span><br><span class="line">    System.out.println(fibonacci(input));</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>];</span><br><span class="line">    <span class="keyword">int</span> T, n;</span><br><span class="line"></span><br><span class="line">    arr[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    arr[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">    arr[<span class="number">3</span>] = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    T = sc.nextInt();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; T; i++) &#123;</span><br><span class="line">      n = sc.nextInt();</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">4</span>; j&lt;=n; j++) &#123;</span><br><span class="line">        arr[j] = arr[j-<span class="number">1</span>] + arr[j-<span class="number">2</span>] + arr[j-<span class="number">3</span>];</span><br><span class="line">      &#125;</span><br><span class="line">      System.out.println(arr[n]);</span><br><span class="line">    &#125;</span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
