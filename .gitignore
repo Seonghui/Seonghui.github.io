@@ -3,7 +3,6 @@
 .bundle
 .sass-cache
 node_modules
-package.json
 
 ## Jekyll stuff
 /_drafts/
