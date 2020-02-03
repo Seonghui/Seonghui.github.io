@@ -47,9 +47,9 @@
 </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Step by Step">
+<meta property="og:title" content="dev blog">
 <meta property="og:url" content="https://seonghui.github.io/page/4/index.html">
-<meta property="og:site_name" content="Step by Step">
+<meta property="og:site_name" content="dev blog">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:author" content="Stella">
 <meta property="article:tag" content="개발">
@@ -70,7 +70,7 @@
   };
 </script>
 
-  <title>Step by Step</title>
+  <title>dev blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144356483-1"></script>
     <script>
@@ -123,7 +123,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Step by Step</span>
+        <span class="site-title">dev blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-12-16-bj-2577/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-12-16-bj-10172/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -197,12 +197,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2018-12-16-bj-2577/" class="post-title-link" itemprop="url">[백준/2577] 숫자의 개수</a>
+            <a href="/2020/01/20/2018-12-16-bj-10172/" class="post-title-link" itemprop="url">[백준/10172] 개</a>
         </h1>
 
         <div class="post-meta">
@@ -213,7 +213,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:47" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:52" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,8 +236,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2018-12-16-bj-2577/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-12-16-bj-2577/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2018-12-16-bj-10172/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-12-16-bj-10172/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -253,13 +253,13 @@
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2577" target="_blank" rel="noopener">2577</a></p>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/10172" target="_blank" rel="noopener">10172</a></p>
 </blockquote>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>a,b,c는 1000보다 작은 자연수이니 배열의 최대 크기는 10이 됨. 왜냐면 자릿수만큼 저장해야 되니…</li>
-<li>나머지로 숫자의 갯수를 셀 수 있고, 몫으로 자릿수를 구할 수 있음.</li>
+<li>자바스크립트로 풀었던 문제.</li>
+<li>이스케이프 문자를 사용해야 된다. 멍멍.</li>
 </ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> a = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span> b = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span> c = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span> result = a * b * c;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[] number = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(result &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      number[result%<span class="number">10</span>]++;</span><br><span class="line">      result/=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; number.length; i++) &#123;</span><br><span class="line">      System.out.println(number[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Code-JAVASCRIPT"><a href="#Code-JAVASCRIPT" class="headerlink" title="Code (JAVASCRIPT)"></a>Code (JAVASCRIPT)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"|\\_/|\n|q p| /&#125;\n( 0 )\"\"\"\\\n|\"^\"` |\n||_/=\\\\__|"</span>);</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -287,7 +287,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -373,6 +373,188 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-07-23-bj-2884/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-07-23-bj-2884/" class="post-title-link" itemprop="url">[백준/2884] 알람 시계</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:55" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-07-23-bj-2884/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-07-23-bj-2884/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2884" target="_blank" rel="noopener">2884</a></p>
+</blockquote>
+<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">H, M = input().split()</span><br><span class="line">hours = int(H)</span><br><span class="line">minutes = int(M)</span><br><span class="line"><span class="keyword">if</span> minutes - <span class="number">45</span> &gt;= <span class="number">0</span>:</span><br><span class="line">  h = str(hours)</span><br><span class="line">  m = str(minutes - <span class="number">45</span>)</span><br><span class="line">  print(h + <span class="string">' '</span> + m)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">if</span> hours == <span class="number">0</span>:</span><br><span class="line">    h = str(<span class="number">23</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    h = str(hours - <span class="number">1</span>)</span><br><span class="line">  m = str(minutes + <span class="number">60</span> - <span class="number">45</span>)</span><br><span class="line">  print(h + <span class="string">' '</span> + m)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-12-22-bj-1003/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-12-22-bj-1003/" class="post-title-link" itemprop="url">[백준/1003] 피보나치 함수</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 17:39:38" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-12-22-bj-1003/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-12-22-bj-1003/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1003" target="_blank" rel="noopener">1003</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>9월에 몇 번 풀었다 실패한 문제다. 며칠 전까지 계속 틀려서 총 8번을 틀렸는데, 대부분이 시간 초과였다.</li>
+<li>예전에는 재귀로 풀어도 AC를 받은 것 같은데 지금은 안 되는 걸 보니 시간 제한이 바뀌었나 봄. 그래서 메모이제이션으로 풀었다.</li>
+<li>처음에는 그냥 단순하게 전역으로 zero, one 변수를 선언하고 0일 때, 1일 때 각각 zero, one 값을 증가하는 방식으로 풀었다. 당연 틀림 ㅋㅋ. 이렇게 하면 안 된다. 내가 문제 제대로 이해 못하기도 했고… 아무튼 여기서 삽질 진짜 많이 했다.</li>
+<li><img src="/images/bj-1003/fibo.png" alt="example"></li>
+<li>fibonacci(5)는 fibonacci(4) + fibonacci(3)의 값으로 구할 수 있다. fibonacci(4)의 0과 1의 개수는 각각 2 3, fibonacci(3)의 0과 1의 개수는 1 2다. 따라서 fibonacci(5)는 그 둘을 더한 3 5가 된다. 참고로 fibonacci(4) = 3, fibonacci(5) = 5이다.</li>
+<li>결과적으로 0의 개수는 fibonacci(n-1), 1의 개수는 fibonacci(n)일 때 구할 수 있다.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">int</span>[] memo;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">      memo[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">      memo[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(memo[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n];</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n] = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader in = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> T = Integer.parseInt(in.readLine());</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; T; i++) &#123;</span><br><span class="line">      <span class="keyword">int</span> N = Integer.parseInt(in.readLine());</span><br><span class="line">      memo = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(N == <span class="number">0</span>) &#123;</span><br><span class="line">        System.out.println(<span class="number">1</span> + <span class="string">" "</span> +<span class="number">0</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span>(N == <span class="number">1</span>) &#123;</span><br><span class="line">        System.out.println(<span class="number">0</span> + <span class="string">" "</span> +<span class="number">1</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        fibonacci(N);</span><br><span class="line">        System.out.println(fibonacci(N-<span class="number">1</span>) + <span class="string">" "</span> + fibonacci(N));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-07-22-pgs-12915/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -382,7 +564,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -475,7 +657,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -561,188 +743,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-07-23-bj-2884/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-07-23-bj-2884/" class="post-title-link" itemprop="url">[백준/2884] 알람 시계</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:55" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-07-23-bj-2884/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-07-23-bj-2884/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2884" target="_blank" rel="noopener">2884</a></p>
-</blockquote>
-<h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">H, M = input().split()</span><br><span class="line">hours = int(H)</span><br><span class="line">minutes = int(M)</span><br><span class="line"><span class="keyword">if</span> minutes - <span class="number">45</span> &gt;= <span class="number">0</span>:</span><br><span class="line">  h = str(hours)</span><br><span class="line">  m = str(minutes - <span class="number">45</span>)</span><br><span class="line">  print(h + <span class="string">' '</span> + m)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">if</span> hours == <span class="number">0</span>:</span><br><span class="line">    h = str(<span class="number">23</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    h = str(hours - <span class="number">1</span>)</span><br><span class="line">  m = str(minutes + <span class="number">60</span> - <span class="number">45</span>)</span><br><span class="line">  print(h + <span class="string">' '</span> + m)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-12-22-bj-1003/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2018-12-22-bj-1003/" class="post-title-link" itemprop="url">[백준/1003] 피보나치 함수</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 17:39:38" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2018-12-22-bj-1003/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-12-22-bj-1003/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/1003" target="_blank" rel="noopener">1003</a></p>
-</blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>9월에 몇 번 풀었다 실패한 문제다. 며칠 전까지 계속 틀려서 총 8번을 틀렸는데, 대부분이 시간 초과였다.</li>
-<li>예전에는 재귀로 풀어도 AC를 받은 것 같은데 지금은 안 되는 걸 보니 시간 제한이 바뀌었나 봄. 그래서 메모이제이션으로 풀었다.</li>
-<li>처음에는 그냥 단순하게 전역으로 zero, one 변수를 선언하고 0일 때, 1일 때 각각 zero, one 값을 증가하는 방식으로 풀었다. 당연 틀림 ㅋㅋ. 이렇게 하면 안 된다. 내가 문제 제대로 이해 못하기도 했고… 아무튼 여기서 삽질 진짜 많이 했다.</li>
-<li><img src="/images/bj-1003/fibo.png" alt="example"></li>
-<li>fibonacci(5)는 fibonacci(4) + fibonacci(3)의 값으로 구할 수 있다. fibonacci(4)의 0과 1의 개수는 각각 2 3, fibonacci(3)의 0과 1의 개수는 1 2다. 따라서 fibonacci(5)는 그 둘을 더한 3 5가 된다. 참고로 fibonacci(4) = 3, fibonacci(5) = 5이다.</li>
-<li>결과적으로 0의 개수는 fibonacci(n-1), 1의 개수는 fibonacci(n)일 때 구할 수 있다.</li>
-</ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">int</span>[] memo;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">      memo[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">      memo[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(memo[n] != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n];</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> memo[n] = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader in = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> T = Integer.parseInt(in.readLine());</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; T; i++) &#123;</span><br><span class="line">      <span class="keyword">int</span> N = Integer.parseInt(in.readLine());</span><br><span class="line">      memo = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(N == <span class="number">0</span>) &#123;</span><br><span class="line">        System.out.println(<span class="number">1</span> + <span class="string">" "</span> +<span class="number">0</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span>(N == <span class="number">1</span>) &#123;</span><br><span class="line">        System.out.println(<span class="number">0</span> + <span class="string">" "</span> +<span class="number">1</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        fibonacci(N);</span><br><span class="line">        System.out.println(fibonacci(N-<span class="number">1</span>) + <span class="string">" "</span> + fibonacci(N));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-26-bj-9465/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -752,7 +752,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -866,7 +866,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -946,6 +946,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11054/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-10-29-bj-11054/" class="post-title-link" itemprop="url">[백준/11054] 가장 긴 바이토닉 부분 수열</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 17:39:33" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-10-29-bj-11054/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-29-bj-11054/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11054" target="_blank" rel="noopener">11054</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>이 문제는 가장 긴 증가하는 부분 수열(LIS)을 두 번 활용하면 되는 문제이다.</p>
+<p><img src="/images/bj-11054/image-1.png" alt="result"><br>이렇게 오른쪽, 왼쪽 방향으로 진행하는 LIS의 길이를 구해 각 배열에 저장한 다음, 그 두 배열의 값이 최대가 되는 지점이 바로 정답이 된다.</p>
+<p><img src="/images/bj-11054/image-2.png" alt="result"><br>오른쪽으로 진행하는 LIS의 값은 DP 배열에 저장하고, 왼쪽으로 진행하는 LIS의 값은 R 배열에 저장한다. 따라서 아까 말했듯이, <strong>DP[i]+R[i]로 나온 값들 중의 최대값이 바로 정답</strong>이 되는 것이다.</p>
+<p>그런데 왜 정답은 7인데 더한 값은 8일까? 바로 가운데 값이 중복되기 때문에 그렇다.</p>
+<ul>
+<li>DP배열의 LIS: 1, 2, 3, 4, 5</li>
+<li>R배열의 LIS: 1, 2, 5</li>
+<li>총 길이: 1, 2, 3, 4, <strong>5, 5</strong>, 2, 1</li>
+</ul>
+<p>이렇게 5가 중복이 되기 때문에 1을 빼줘야 정답이 된다.</p>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] R = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans1 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> ans2 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 오른쪽으로 진행</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      DP[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</span><br><span class="line">          DP[i] = Math.max(DP[i], DP[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans1 = Math.max(ans1, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 왼쪽으로 진행</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = N; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">      R[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = N; j &gt;= i; j--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</span><br><span class="line">          R[i] = Math.max(R[i], R[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans2 = Math.max(ans2, R[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 최대값 구하기</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      max = Math.max(DP[i] + R[i], max);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1을 뺀 결과값</span></span><br><span class="line">    System.out.println(max-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11055/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -955,7 +1052,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -1019,96 +1116,6 @@
 <li>이 부분을 몰라서 네 번이나 틀림.</li>
 </ul>
 <h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++ ) &#123;</span><br><span class="line">      DP[i] = A[i];</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[j] &amp;&amp; DP[i] &lt; DP[j]+A[i]) &#123;</span><br><span class="line">          DP[i] = DP[j] + A[i];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(ans &lt; DP[i]) &#123;</span><br><span class="line">        ans = DP[i];</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(ans);</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-10-29-bj-11722/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2018-10-29-bj-11722/" class="post-title-link" itemprop="url">[백준/11722] 가장 긴 감소하는 부분 수열</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:08:36" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2018-10-29-bj-11722/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-10-29-bj-11722/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/11722" target="_blank" rel="noopener">11722</a></p>
-</blockquote>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
-<li>백준 11053 문제를 풀었다면, 부등호 하나만 고쳐서 풀 수 있는 문제이다.</li>
-<li>그래서 그런지 정답률이 꽤 높다.</li>
-</ul>
-<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> N = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] DP = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">    StringTokenizer st = <span class="keyword">new</span> StringTokenizer(bf.readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">      A[i] = Integer.parseInt(st.nextToken());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++ ) &#123;</span><br><span class="line">      DP[i] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &lt; A[j]) &#123;</span><br><span class="line">          DP[i] = Math.max(DP[i], DP[j] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans = Math.max(ans, DP[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(ans);</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 

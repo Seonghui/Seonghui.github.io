@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Step by Step
+title: dev blog
 subtitle: ""
 description: ""
 keywords: 개발, 기술블로그, 자바스크립트, react
@@ -13,7 +13,7 @@ timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://seonghui.github.io/
+url: https://seonghui.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

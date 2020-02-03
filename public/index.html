@@ -47,9 +47,9 @@
 </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Step by Step">
+<meta property="og:title" content="dev blog">
 <meta property="og:url" content="https://seonghui.github.io/index.html">
-<meta property="og:site_name" content="Step by Step">
+<meta property="og:site_name" content="dev blog">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:author" content="Stella">
 <meta property="article:tag" content="개발">
@@ -70,7 +70,7 @@
   };
 </script>
 
-  <title>Step by Step</title>
+  <title>dev blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144356483-1"></script>
     <script>
@@ -123,7 +123,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Step by Step</span>
+        <span class="site-title">dev blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -197,7 +197,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -295,7 +295,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -376,191 +376,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-10-17-leetcode-832/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-10-17-leetcode-832/" class="post-title-link" itemprop="url">[Leetcode/832] Flipping an Image</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:05:41" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-10-17-leetcode-832/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-10-17-leetcode-832/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>Leetcode - <a href="https://leetcode.com/problems/flipping-an-image/" target="_blank" rel="noopener">832</a></p>
-</blockquote>
-<h2 id="풀이과정"><a href="#풀이과정" class="headerlink" title="풀이과정"></a>풀이과정</h2><ul>
-<li>각 배열의 값을 좌우 대칭으로 변경하고 값을 반전시켜주면 되는 문제.</li>
-<li>front, back 변수 두 개 만든 다음, 중간을 기점으로 루프 돌 때마다 front를 증가시키고 back을 감소시켜 변경할 값들의 인덱스를 구한 다음에 값을 swap했다.</li>
-<li>그렇게 좌우 대칭한 배열의 값들을 반전시켜주면 끝.</li>
-</ul>
-<h2 id="Code-Javascript"><a href="#Code-Javascript" class="headerlink" title="Code (Javascript)"></a>Code (Javascript)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flipAndInvertImage = <span class="function"><span class="keyword">function</span> (<span class="params">A</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> array <span class="keyword">of</span> A) &#123;</span><br><span class="line">    <span class="keyword">let</span> front = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> back = array.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// flip horizontally</span></span><br><span class="line">    <span class="keyword">while</span> (array.length / <span class="number">2</span> &gt; front) &#123;</span><br><span class="line">      <span class="comment">// swap</span></span><br><span class="line">      <span class="keyword">let</span> temp;</span><br><span class="line">      temp = array[front];</span><br><span class="line">      array[front] = array[back];</span><br><span class="line">      array[back] = temp;</span><br><span class="line"></span><br><span class="line">      front += <span class="number">1</span>;</span><br><span class="line">      back -= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// invert</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">      array[i] = array[i] === <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> A;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>요새 리트코드로 많이 풀길래 한번 풀어봄.. 간만에 자바스크립트로 풀었다..</p>
-<p>리트코드는 다른 사람 코드 어떻게 보는 건지 모르겠다.. 구글링인가..?</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-10-21-js-hashbang/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/2019-10-21-js-hashbang/" class="post-title-link" itemprop="url">[Javascript] 해시뱅 (HashBang)</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:02:59" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/01/20/2019-10-21-js-hashbang/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-10-21-js-hashbang/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="해시뱅"><a href="#해시뱅" class="headerlink" title="해시뱅?"></a>해시뱅?</h2><p>얼마 전 신기한 URL을 봤다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">www.test.com&#x2F;#&#x2F;</span><br><span class="line">www.test.com&#x2F;#&#x2F;settings</span><br><span class="line">www.test.com&#x2F;#&#x2F;register</span><br></pre></td></tr></table></figure>
-
-<p>이런 식으로 URL에 #이 붙는 것이다. 처음에는 뭔지 몰라 그냥 지나갔는데 오늘 이것의 정체가 해시뱅이라는 것을 알게 되었다. 샵 다음에 느낌표(#!)를 붙이기도 하나 보다. 이름부터가 해시뱅(#!)인 걸 보면… 아무튼 해시뱅은 <a href="https://blog.outsider.ne.kr/698" target="_blank" rel="noopener">이 블로그</a>에 엄청나게 자세히 설명이 되어 있다.</p>
-<p>블로그 글을 요약하자면, 해시뱅을 사용하는 이유는 <strong>단일 페이지 애플리케이션(SPA)</strong> 구현을 위해서다. 해시뱅을 사용하면 페이지 갱신 없이 URL을 변경할 수 있다. 정확히는 변경되는 것처럼 보이는 거지만. 해시뱅에서 # 다음 부분을 <code>fragment identifier</code>라고 하는데, 위 예제에서는 settings, register이 <code>fragment identifier</code>가 된다. 해시뱅의 원리는 html의 네임 앵커를 이용한 것이다.</p>
-<p>꽤 오래 전에 사용했던 기술이고 지금은 deprecated 되었다. (하지만 내가 사용하게 되는데…)</p>
-<h2 id="React에-해시뱅-적용하기"><a href="#React에-해시뱅-적용하기" class="headerlink" title="React에 해시뱅 적용하기"></a>React에 해시뱅 적용하기</h2><p>적용 방법은 단순하다. <a href="https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/HashRouter.md" target="_blank" rel="noopener">HashRouter</a>를 사용하면 된다.</p>
-<p><code>BrowserRouter</code> 에서</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line">import App from &#39;.&#x2F;components&#x2F;App&#39;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const Routes &#x3D; () &#x3D;&gt; (</span><br><span class="line">  &lt;BrowserRouter&gt;</span><br><span class="line">    &lt;App &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;BrowserRouter&gt;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">export default Routes;</span><br></pre></td></tr></table></figure>
-
-<p><code>HashRouter</code>로 바꿔주었다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import &#123; HashRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line">import App from &#39;.&#x2F;components&#x2F;App&#39;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const Routes &#x3D; () &#x3D;&gt; (</span><br><span class="line">  &lt;HashRouter&gt;</span><br><span class="line">    &lt;App &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;HashRouter&gt;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">export default Routes;</span><br></pre></td></tr></table></figure>
-
-<p>HashRouter를 굳이 사용해야 할 이유를 하나 꼽자면 레거시 브라우저(IE9 이하) 지원 정도…? 그 이외에는 사용해야 할 이유를 잘 모르겠다.</p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a href="https://blog.outsider.ne.kr/698" target="_blank" rel="noopener">해시뱅(#!)에 대해서…</a></li>
-<li><a href="https://stackoverflow.com/questions/3009380/whats-the-shebang-hashbang-in-facebook-and-new-twitter-urls-for" target="_blank" rel="noopener">What’s the shebang/hashbang (#!) in Facebook and new Twitter URLs for?</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-10-22-pgs-42584/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -570,7 +385,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -662,7 +477,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -757,7 +572,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -844,6 +659,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-10-21-js-hashbang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-10-21-js-hashbang/" class="post-title-link" itemprop="url">[Javascript] 해시뱅 (HashBang)</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:02:59" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-10-21-js-hashbang/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-10-21-js-hashbang/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="해시뱅"><a href="#해시뱅" class="headerlink" title="해시뱅?"></a>해시뱅?</h2><p>얼마 전 신기한 URL을 봤다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">www.test.com&#x2F;#&#x2F;</span><br><span class="line">www.test.com&#x2F;#&#x2F;settings</span><br><span class="line">www.test.com&#x2F;#&#x2F;register</span><br></pre></td></tr></table></figure>
+
+<p>이런 식으로 URL에 #이 붙는 것이다. 처음에는 뭔지 몰라 그냥 지나갔는데 오늘 이것의 정체가 해시뱅이라는 것을 알게 되었다. 샵 다음에 느낌표(#!)를 붙이기도 하나 보다. 이름부터가 해시뱅(#!)인 걸 보면… 아무튼 해시뱅은 <a href="https://blog.outsider.ne.kr/698" target="_blank" rel="noopener">이 블로그</a>에 엄청나게 자세히 설명이 되어 있다.</p>
+<p>블로그 글을 요약하자면, 해시뱅을 사용하는 이유는 <strong>단일 페이지 애플리케이션(SPA)</strong> 구현을 위해서다. 해시뱅을 사용하면 페이지 갱신 없이 URL을 변경할 수 있다. 정확히는 변경되는 것처럼 보이는 거지만. 해시뱅에서 # 다음 부분을 <code>fragment identifier</code>라고 하는데, 위 예제에서는 settings, register이 <code>fragment identifier</code>가 된다. 해시뱅의 원리는 html의 네임 앵커를 이용한 것이다.</p>
+<p>꽤 오래 전에 사용했던 기술이고 지금은 deprecated 되었다. (하지만 내가 사용하게 되는데…)</p>
+<h2 id="React에-해시뱅-적용하기"><a href="#React에-해시뱅-적용하기" class="headerlink" title="React에 해시뱅 적용하기"></a>React에 해시뱅 적용하기</h2><p>적용 방법은 단순하다. <a href="https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/HashRouter.md" target="_blank" rel="noopener">HashRouter</a>를 사용하면 된다.</p>
+<p><code>BrowserRouter</code> 에서</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line">import App from &#39;.&#x2F;components&#x2F;App&#39;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const Routes &#x3D; () &#x3D;&gt; (</span><br><span class="line">  &lt;BrowserRouter&gt;</span><br><span class="line">    &lt;App &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;BrowserRouter&gt;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">export default Routes;</span><br></pre></td></tr></table></figure>
+
+<p><code>HashRouter</code>로 바꿔주었다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import &#123; HashRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line">import App from &#39;.&#x2F;components&#x2F;App&#39;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const Routes &#x3D; () &#x3D;&gt; (</span><br><span class="line">  &lt;HashRouter&gt;</span><br><span class="line">    &lt;App &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;HashRouter&gt;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">export default Routes;</span><br></pre></td></tr></table></figure>
+
+<p>HashRouter를 굳이 사용해야 할 이유를 하나 꼽자면 레거시 브라우저(IE9 이하) 지원 정도…? 그 이외에는 사용해야 할 이유를 잘 모르겠다.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://blog.outsider.ne.kr/698" target="_blank" rel="noopener">해시뱅(#!)에 대해서…</a></li>
+<li><a href="https://stackoverflow.com/questions/3009380/whats-the-shebang-hashbang-in-facebook-and-new-twitter-urls-for" target="_blank" rel="noopener">What’s the shebang/hashbang (#!) in Facebook and new Twitter URLs for?</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-10-26-pgs-42885/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -853,7 +758,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -949,6 +854,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-10-17-leetcode-832/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2019-10-17-leetcode-832/" class="post-title-link" itemprop="url">[Leetcode/832] Flipping an Image</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:05:41" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2019-10-17-leetcode-832/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-10-17-leetcode-832/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Leetcode - <a href="https://leetcode.com/problems/flipping-an-image/" target="_blank" rel="noopener">832</a></p>
+</blockquote>
+<h2 id="풀이과정"><a href="#풀이과정" class="headerlink" title="풀이과정"></a>풀이과정</h2><ul>
+<li>각 배열의 값을 좌우 대칭으로 변경하고 값을 반전시켜주면 되는 문제.</li>
+<li>front, back 변수 두 개 만든 다음, 중간을 기점으로 루프 돌 때마다 front를 증가시키고 back을 감소시켜 변경할 값들의 인덱스를 구한 다음에 값을 swap했다.</li>
+<li>그렇게 좌우 대칭한 배열의 값들을 반전시켜주면 끝.</li>
+</ul>
+<h2 id="Code-Javascript"><a href="#Code-Javascript" class="headerlink" title="Code (Javascript)"></a>Code (Javascript)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flipAndInvertImage = <span class="function"><span class="keyword">function</span> (<span class="params">A</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> array <span class="keyword">of</span> A) &#123;</span><br><span class="line">    <span class="keyword">let</span> front = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> back = array.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// flip horizontally</span></span><br><span class="line">    <span class="keyword">while</span> (array.length / <span class="number">2</span> &gt; front) &#123;</span><br><span class="line">      <span class="comment">// swap</span></span><br><span class="line">      <span class="keyword">let</span> temp;</span><br><span class="line">      temp = array[front];</span><br><span class="line">      array[front] = array[back];</span><br><span class="line">      array[back] = temp;</span><br><span class="line"></span><br><span class="line">      front += <span class="number">1</span>;</span><br><span class="line">      back -= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// invert</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">      array[i] = array[i] === <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> A;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>요새 리트코드로 많이 풀길래 한번 풀어봄.. 간만에 자바스크립트로 풀었다..</p>
+<p>리트코드는 다른 사람 코드 어떻게 보는 건지 모르겠다.. 구글링인가..?</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-11-25-react-index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -958,7 +958,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -1101,7 +1101,7 @@ module.exports = {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-04-boj-7568/">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2019-08-08-pgs-42839/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1110,12 +1110,12 @@ module.exports = {
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Step by Step">
+      <meta itemprop="name" content="dev blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/2019-08-04-boj-7568/" class="post-title-link" itemprop="url">[백준/7568] 덩치</a>
+            <a href="/2020/01/20/2019-08-08-pgs-42839/" class="post-title-link" itemprop="url">[프로그래머스] 소수 찾기</a>
         </h1>
 
         <div class="post-meta">
@@ -1126,7 +1126,7 @@ module.exports = {
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:01" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:11:02" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1134,8 +1134,8 @@ module.exports = {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
-                    <span itemprop="name">백준</span>
+                  <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">프로그래머스</span>
                   </a>
                 </span>
             </span>
@@ -1149,8 +1149,8 @@ module.exports = {
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/01/20/2019-08-04-boj-7568/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-04-boj-7568/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/01/20/2019-08-08-pgs-42839/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2019-08-08-pgs-42839/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1166,15 +1166,21 @@ module.exports = {
 
       
           <blockquote>
-<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/7568" target="_blank" rel="noopener">7568</a></p>
+<p>프로그래머스 - <a href="https://programmers.co.kr/learn/courses/30/lessons/42839" target="_blank" rel="noopener">연습 문제</a></p>
 </blockquote>
 <h2 id="Code-Python"><a href="#Code-Python" class="headerlink" title="Code (Python)"></a>Code (Python)</h2><ul>
-<li>리스트 정렬해서 풀다가 이건 아니다 싶어서 전수 비교</li>
-<li>음 그런데 다른 분이 짠 코드 보니까 for문을 리스트 길이로 돌린 게 뻘짓</li>
+<li>완전탐색(Brute-Force)</li>
+<li>itertools 없었으면 절대 못 풀었을 문제다. 그저 갓이썬…</li>
+<li><code>itertools.permutation</code>로 모든 숫자의 조합을 구해 리스트에 저장.</li>
+<li>숫자 조합 리스트의 최대값까지의 소수를 찾는다. 소수는 에라토스테네스의 체를 활용해서 찾으면 된다.</li>
+<li>소수 리스트와 숫자 조합 리스트의 합집합을 구하고 길이를 리턴한다.</li>
+<li>다음에는 itertools 없이 풀어봐야겠다.</li>
 </ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">N = int(input())</span><br><span class="line">dungchi_list = []</span><br><span class="line">answer = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">    dungchi_list.append(list(map(int, input().split())))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(dungchi_list)): <span class="comment"># 현재 덩치</span></span><br><span class="line">    count = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(dungchi_list)): <span class="comment"># 비교할 덩치들</span></span><br><span class="line">        <span class="keyword">if</span> dungchi_list[i][<span class="number">0</span>] &lt; dungchi_list[j][<span class="number">0</span>]: <span class="comment"># 몸무게도 크고</span></span><br><span class="line">            <span class="keyword">if</span> dungchi_list[i][<span class="number">1</span>] &lt; dungchi_list[j][<span class="number">1</span>]: <span class="comment"># 키도 크다면</span></span><br><span class="line">                count = count + <span class="number">1</span></span><br><span class="line">    answer.append(count)</span><br><span class="line"></span><br><span class="line">print(<span class="string">' '</span>.join(map(str, answer)))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sieve</span><span class="params">(n)</span>:</span></span><br><span class="line">    num=set(range(<span class="number">2</span>,n+<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> i <span class="keyword">in</span> num:</span><br><span class="line">            num-=set(range(<span class="number">2</span>*i,n+<span class="number">1</span>,i))</span><br><span class="line">    <span class="keyword">return</span> num</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(numbers)</span>:</span></span><br><span class="line">    numbers_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(numbers) + <span class="number">1</span>):</span><br><span class="line">        numbers_list += list(map(<span class="string">''</span>.join, itertools.permutations(numbers,i)))</span><br><span class="line"></span><br><span class="line">    numbers_list = set(map(int, numbers_list))</span><br><span class="line">    prime_list = sieve(max(numbers_list))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> len(numbers_list &amp; prime_list)</span><br></pre></td></tr></table></figure>
 
-<h2 id="References-1-출처"><a href="#References-1-출처" class="headerlink" title="References 1 (출처)"></a>References 1 <a href="https://claude-u.tistory.com/122" target="_blank" rel="noopener">(출처)</a></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num_student = int(input())</span><br><span class="line">student_list = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(num_student):</span><br><span class="line">    weight, height = map(int, input().split())</span><br><span class="line">    student_list.append((weight, height))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> student_list:</span><br><span class="line">    rank = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> student_list:</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">0</span>] &lt; j[<span class="number">0</span>] <span class="keyword">and</span> i[<span class="number">1</span>] &lt; j[<span class="number">1</span>]:</span><br><span class="line">                rank += <span class="number">1</span></span><br><span class="line">    print(rank, end = <span class="string">" "</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://programmers.co.kr/learn/courses/4008/lessons/12836" target="_blank" rel="noopener">순열과 조합 - combinations, permutations</a></li>
+</ul>
 
       
     </div>
