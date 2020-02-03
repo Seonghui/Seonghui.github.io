@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://seonghui.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="dev blog">
+<meta property="og:url" content="https://seonghui.github.io/page/8/index.html">
+<meta property="og:site_name" content="dev blog">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:author" content="Stella">
+<meta property="article:tag" content="개발">
+<meta property="article:tag" content=" 기술블로그">
+<meta property="article:tag" content=" 자바스크립트">
+<meta property="article:tag" content=" react">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://seonghui.github.io/page/8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>dev blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144356483-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144356483-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">dev blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-18-bj-2839/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-18-bj-2839/" class="post-title-link" itemprop="url">[백준/2839] 설탕 배달</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:42" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-18-bj-2839/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-18-bj-2839/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2839" target="_blank" rel="noopener">2839</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>3을 계속 빼다 5의 배수인 경우 5로 전부 나누면 된다.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> input = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 입력이 5의 배수가 아닌 경우, 0보다 같거나 클 경우</span></span><br><span class="line">    <span class="keyword">while</span>(input % <span class="number">5</span> !=<span class="number">0</span> &amp;&amp; input &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="comment">// 3씩 뺌</span></span><br><span class="line">      input -=<span class="number">3</span>;</span><br><span class="line">      cnt++;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ans = input &lt; <span class="number">0</span> ? -<span class="number">1</span> : cnt + input/<span class="number">5</span>;</span><br><span class="line">    System.out.println(ans);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-19-bj-15552/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-19-bj-15552/" class="post-title-link" itemprop="url">[백준/15552] 빠른 A+B</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:51" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-19-bj-15552/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-19-bj-15552/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/15552" target="_blank" rel="noopener">15552</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>입출력 연습하는 문제.</li>
+<li>BufferedReader를 통해서 입력을 받으면 된다.</li>
+<li>출력은 StringBuilder와 BufferedWriter를 각각 사용해서 풀었다.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(bf.readLine());</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      String[] line = bf.readLine().split(<span class="string">" "</span>);</span><br><span class="line">      res = Integer.parseInt(line[<span class="number">0</span>]) + Integer.parseInt(line[<span class="number">1</span>]);</span><br><span class="line">      sb.append(res + <span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(sb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Code-JAVA-1"><a href="#Code-JAVA-1" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> OutputStreamWriter(System.out));</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(bf.readLine());</span><br><span class="line">    String res;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      String[] line = bf.readLine().split(<span class="string">" "</span>);</span><br><span class="line">      res = (Integer.parseInt(line[<span class="number">0</span>]) + Integer.parseInt(line[<span class="number">1</span>])) + <span class="string">"\n"</span>;</span><br><span class="line">      bw.write(res);</span><br><span class="line">    &#125;</span><br><span class="line">    bw.flush();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-19-java-plang-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-19-java-plang-3/" class="post-title-link" itemprop="url">[JAVA] 프로그래밍 대회에서 사용하는 자바 - 3</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:56" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-19-java-plang-3/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-19-java-plang-3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><a href="https://code.plus/course/3" target="_blank" rel="noopener">백준 강의</a> 정리 - 정렬</p>
+</blockquote>
+<ul>
+<li>배열은 Arrays.sort, 콜렉션은 Collections.sort를 사용한다.</li>
+</ul>
+<h1 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h1><ol>
+<li><p><a href="#link-1">오름차순 정렬</a></p>
+<ul>
+<li><a href="#link-1-1">ArrayList를 이용하기</a><ul>
+<li><a href="#link-1-2">정수 배열을 이용하기</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#link-2">좌표 정렬하기</a></p>
+<ul>
+<li><a href="#link-2-1">Comparable</a></li>
+<li><a href="#link-2-1-1">좌표 정렬하기 문제 풀어보기 - Comparable</a></li>
+<li><a href="#link-2-2">Comparator</a></li>
+<li><a href="#link-2-2-1">좌표 정렬하기 문제 풀어보기 - Comparator</a></li>
+</ul>
+</li>
+<li><p><a href="#link-3">좌표 정렬하기 2</a></p>
+</li>
+</ol>
+<h2 id="1-오름차순-정렬"><a href="#1-오름차순-정렬" class="headerlink" title="1. 오름차순 정렬"></a><a id="link-1"></a>1. 오름차순 정렬</h2><h3 id="1-1-ArrayList를-이용하기"><a href="#1-1-ArrayList를-이용하기" class="headerlink" title="1.1 ArrayList를 이용하기"></a><a id="link-1-1"></a>1.1 ArrayList를 이용하기</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    ArrayList&lt;Integer&gt; a = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="comment">// n개의 수를 입력받아 저장</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">      <span class="keyword">int</span> temp = sc.nextInt();</span><br><span class="line">      a.add(temp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ArrayList에 있는 모든 요소를 오름차순으로 정렬</span></span><br><span class="line">    Collections.sort(a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//출력</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> x : a) &#123;</span><br><span class="line">      System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-정수-배열을-이용하기"><a href="#1-2-정수-배열을-이용하기" class="headerlink" title="1.2 정수 배열을 이용하기"></a><a id="link-1-2"></a>1.2 정수 배열을 이용하기</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 삽입</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">      a[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 정렬</span></span><br><span class="line">    Arrays.sort(a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 출력</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> x : a) &#123;</span><br><span class="line">      System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-좌표-정렬하기"><a href="#2-좌표-정렬하기" class="headerlink" title="2. 좌표 정렬하기"></a><a id="link-2"></a>2. 좌표 정렬하기</h2><ul>
+<li>(x,y)가 여러 개 있을 때, x가 증가하는 순으로, 같으면 y가 증가하는 순으로 정렬하는 문제.</li>
+<li>Comparator나 Comparable을 작성해야 한다.</li>
+<li>Comparable는 compareTo를 구현하는데, 내츄럴한 순서를 정의한다. (예를 들면 문자열은 사진 순)</li>
+<li>Comparator는 다른 순서로 정렬하고 싶을 때 사용한다. (예를 들면 문자열을 길이 순으로 정렬하고 싶을 때)</li>
+</ul>
+<h3 id="2-1-Comparable"><a href="#2-1-Comparable" class="headerlink" title="2.1 Comparable"></a><a id="link-2-1"></a>2.1 Comparable</h3><p>CompareTo를 작성할 때는 조심해야 할 것이 세 가지가 있다. CompareTo를 작성할 때는 이 세 가지 조건을 전부 만족해야 한다. 만약 세 가지 중 하나에 위배되는 경우 정렬을 계속하지 않고 프로그램의 실행을 중지하게 된다. (런타임 에러)</p>
+<ol>
+<li>sgn(x.compareTo(y)) == -sgn(y.compareTo(x))<ul>
+<li>여기서 sgn은 부호를 나타낸다. x를 y를 서로 비교했을 때 부호가 서로 같아야 한다.</li>
+</ul>
+</li>
+<li>x.compareTo(y)&gt;0 &amp;&amp; y.compareTo(z)&gt;0) implies x.compareTo(z)&gt;0<ul>
+<li>x랑 y를 비교했을 때 양수고, y랑 z를 비교했을 때 양수라면 x랑 z를 비교했을 때도 양수가 나와야 한다.</li>
+</ul>
+</li>
+<li>x.compareTo(y)==0 implies that sgn(x.compareTo(z)) == sgn(y.compareTo(z))<ul>
+<li>x와 y가 같다면, x를 z랑비교한 것, 그리고 y를 z에 비교한 것의 부호가 서로 같아야 한다.</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Point that)</span> </span>&#123; </span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.x &lt; that.x) &#123;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.x == that.x) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.y &lt; that.y) &#123;  <span class="comment">// 작으면</span></span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.y == that.y) &#123; <span class="comment">// 같으면</span></span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 크면</span></span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="좌표-정렬하기-문제-풀어보기-Comparable"><a href="#좌표-정렬하기-문제-풀어보기-Comparable" class="headerlink" title="좌표 정렬하기 문제 풀어보기 - Comparable"></a><a id="link-2-1-1"></a>좌표 정렬하기 문제 풀어보기 - Comparable</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Comparable implement 하기</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Point</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> x, y;</span><br><span class="line">  Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// compareTo 메소드 작성</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Point that)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.x &lt; that.x) &#123;</span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.x == that.x) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.y &lt; that.y) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.y == that.y) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(bf.readLine());</span><br><span class="line">    Point[] a = <span class="keyword">new</span> Point[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">      String[] temp = bf.readLine().split(<span class="string">" "</span>);</span><br><span class="line">      <span class="keyword">int</span> x = Integer.parseInt(temp[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">int</span> y = Integer.parseInt(temp[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 알아서 정렬이 된다.</span></span><br><span class="line">      a[i] = <span class="keyword">new</span> Point(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">    Arrays.sort(a);</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (Point p : a) &#123;</span><br><span class="line">      sb.append(p.x + <span class="string">" "</span> + p.y + <span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.print(sb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-Comparator"><a href="#2-2-Comparator" class="headerlink" title="2.2 Comparator"></a><a id="link-2-2"></a>2.2 Comparator</h3><p>두 번째 인자로 어떻게 compare할지를 나타내는 함수를 넣어놓으면 된다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(a, <span class="keyword">new</span> Comparator&lt;Point&gt;() &#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Point p1, Point p2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> p1.compareTo(p2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="좌표-정렬하기-문제-풀어보기-Comparator"><a href="#좌표-정렬하기-문제-풀어보기-Comparator" class="headerlink" title="좌표 정렬하기 문제 풀어보기 - Comparator"></a><a id="link-2-2-1"></a>좌표 정렬하기 문제 풀어보기 - Comparator</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Point</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> x, y;</span><br><span class="line">  Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Point that)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.x &lt; that.x) &#123;</span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.x == that.x) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.y &lt; that.y) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.y == that.y) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(bf.readLine());</span><br><span class="line">    Point[] a = <span class="keyword">new</span> Point[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">      String[] temp = bf.readLine().split(<span class="string">" "</span>);</span><br><span class="line">      <span class="keyword">int</span> x = Integer.parseInt(temp[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">int</span> y = Integer.parseInt(temp[<span class="number">1</span>]);</span><br><span class="line">      a[i] = <span class="keyword">new</span> Point(x, y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// sort메소드에 어떻게 정렬할 건지를 두 번째 인자로 넣어주면 된다.</span></span><br><span class="line">    Arrays.sort(a, <span class="keyword">new</span> Comparator&lt;Point&gt;() &#123;</span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Point p1, Point p2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> p1.compareTo(p2);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (Point p : a) &#123;</span><br><span class="line">      sb.append(p.x + <span class="string">" "</span> + p.y + <span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.print(sb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-좌표-정렬하기-2"><a href="#3-좌표-정렬하기-2" class="headerlink" title="3. 좌표 정렬하기 2"></a><a id="link-3"></a>3. 좌표 정렬하기 2</h2><ul>
+<li>(x,y)가 여러 개 있을 때, y가 증가하는 순으로, 같으면 x가 증가하는 순으로 정렬하는 문제.</li>
+<li>Comparator를 사용해야 의미적으로 올바른 구현을 할 수 있다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Point</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> x, y;</span><br><span class="line">  Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Point that)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.x &lt; that.x) &#123;</span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.x == that.x) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.y &lt; that.y) &#123;</span><br><span class="line">          <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.y == that.y) &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">    <span class="keyword">int</span> n = Integer.parseInt(bf.readLine());</span><br><span class="line">    Point[] a = <span class="keyword">new</span> Point[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">      String[] temp = bf.readLine().split(<span class="string">" "</span>);</span><br><span class="line">      <span class="keyword">int</span> x = Integer.parseInt(temp[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">int</span> y = Integer.parseInt(temp[<span class="number">1</span>]);</span><br><span class="line">      a[i] = <span class="keyword">new</span> Point(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">    Arrays.sort(a, <span class="keyword">new</span> Comparator&lt;Point&gt;() &#123;</span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Point p1, Point p2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (p1.y &lt; p2.y) &#123;</span><br><span class="line">          <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (p1.y == p2.y) &#123;</span><br><span class="line">          <span class="keyword">if</span> (p1.x &lt; p2.x) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (p1.x == p2.x) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (Point p : a) &#123;</span><br><span class="line">      sb.append(p.x + <span class="string">" "</span> + p.y + <span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.print(sb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-18-java-plang-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-18-java-plang-2/" class="post-title-link" itemprop="url">[JAVA] 프로그래밍 대회에서 사용하는 자바 - 2</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:09:37" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-18-java-plang-2/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-18-java-plang-2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><a href="https://code.plus/course/3" target="_blank" rel="noopener">백준 강의</a> 정리 - Collections</p>
+</blockquote>
+<ul>
+<li>Collections의 Stack, Queue 등을 사용하면 구현 없이 사용할 수 있다.</li>
+</ul>
+<h1 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h1><ol>
+<li><p><a href="#link-1">ArrayList</a></p>
+<ul>
+<li><a href="#link-1-1">ArrayList의 주요 메소드</a><ul>
+<li><a href="#link-1-2">예제</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#link-2">LinkedList</a></p>
+</li>
+<li><p><a href="#link-3">Stack</a></p>
+<ul>
+<li><a href="#link-3-1">Stack의 주요 메소드</a></li>
+</ul>
+</li>
+<li><p><a href="#link-4">Set</a></p>
+<ul>
+<li><a href="#link-4-1">Set의 주요 메소드</a></li>
+<li><a href="#link-4-2">HashSet</a></li>
+<li><a href="#link-4-3">TreeSet</a></li>
+<li><a href="#link-4-4">LinkedHashSet</a></li>
+</ul>
+</li>
+<li><p><a href="#link-5">Map</a></p>
+<ul>
+<li><a href="#link-5-1">Map의 주요 메소드</a></li>
+</ul>
+</li>
+<li><p><a href="#link-6">Queue</a></p>
+<ul>
+<li><a href="#link-6-1">Queue의 주요 메소드</a></li>
+<li><a href="#link-6-2">PriorityQueue</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="1-ArrayList"><a href="#1-ArrayList" class="headerlink" title="1. ArrayList"></a>1. <a id="link-1"></a>ArrayList</h2><ul>
+<li>배열이다.</li>
+<li>Array와 같은 역할을 하지만, 길이가 정해져 있지 않고 변한다.</li>
+<li>C++에서는 vector에 해당된다.</li>
+<li><code>java.util</code>에 들어있다.</li>
+<li>그래프 문제의 인접 리스트를 만들 때 가장 많이 사용한다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; a = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="comment">// capacity가 40, 자료형은 정수</span></span><br><span class="line">    ArrayList&lt;Integer&gt; b = <span class="keyword">new</span> ArrayList&lt;Integer&gt;(<span class="number">40</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-1-ArrayList의-주요-메소드"><a href="#1-1-ArrayList의-주요-메소드" class="headerlink" title="1.1 ArrayList의 주요 메소드"></a><a id="link-1-1"></a>1.1 ArrayList의 주요 메소드</h3><ol>
+<li><strong>boolean add(E e)</strong><ul>
+<li>새로운 element e를 추가</li>
+</ul>
+</li>
+<li><strong>void add(int index, E element)</strong><ul>
+<li>O(n)</li>
+<li>index번째에 새로운 element e를 추가</li>
+</ul>
+</li>
+<li><strong>void clear()</strong><ul>
+<li>ArrayList를 완전히 비움</li>
+</ul>
+</li>
+<li><strong>boolean Contains(Object o)</strong><ul>
+<li>O(n)</li>
+<li>Object o가 들어있는지 아닌지를 판단</li>
+</ul>
+</li>
+<li><strong>E get(int index)</strong><ul>
+<li>index번째를 데려옴</li>
+<li>arr[index]는 arr.get<index>와 같은 표현이다.</li>
+</ul>
+</li>
+<li><strong>boolean isEmpty()</strong><ul>
+<li>ArrayList가 비어있는지 아닌지 판단</li>
+</ul>
+</li>
+<li><strong>E remove(int index)</strong><ul>
+<li>O(n)</li>
+<li>index번째 삭제 </li>
+</ul>
+</li>
+<li><strong>E set(int index, E element)</strong><ul>
+<li>index번째를 새로운 element로 바꿈</li>
+<li>arr[index] = element와 같다</li>
+</ul>
+</li>
+<li><strong>Object[] toArray()</strong><ul>
+<li>Array로 바꾸기</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-2-예제"><a href="#1-2-예제" class="headerlink" title="1.2 예제"></a>1.2 <a id="link-1-2"></a>예제</h3><ul>
+<li><p>ArrayList에 element 넣어서 출력하기</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    ArrayList&lt;Integer&gt; a = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">      <span class="keyword">int</span> temp = sc.nextInt();</span><br><span class="line">      a.add(temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 정렬하기</span></span><br><span class="line">    Collections.sort(a);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> x : a) &#123;</span><br><span class="line">      System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 이렇게도 출력 가능</span></span><br><span class="line">    <span class="comment">// for (int i=0; i&lt;n; i++) &#123;</span></span><br><span class="line">    <span class="comment">//   System.out.println(a.get(i));</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>그래프 문제의 인접 리스트 만들기</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt;[] a = (ArrayList&lt;Integer&gt;[]) <span class="keyword">new</span> ArrayList[n+<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) &#123;</span><br><span class="line">    a[i] = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> u = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span> v = sc.nextInt();</span><br><span class="line">    <span class="comment">// 인접한 간선 만들기</span></span><br><span class="line">    a[u].add(v);</span><br><span class="line">    a[v].add(u);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-LinkedList"><a href="#2-LinkedList" class="headerlink" title="2. LinkedList"></a>2. <a id="link-2"></a>LinkedList</h2><ul>
+<li>이중 연결 리스트라고 한다.</li>
+<li><code>java.util</code>에 들어있다.</li>
+<li>대회 문제나 알고리즘 문제에서는 사용하는 경우가 드물다.</li>
+</ul>
+<h2 id="3-Stack"><a href="#3-Stack" class="headerlink" title="3. Stack"></a><a id="link-3"></a>3. Stack</h2><ul>
+<li><code>java.util</code>에 들어있다.</li>
+<li>가장 많이 사용하는 메소드 중 하나이다.</li>
+<li>한쪽 끝에서만 자료를 넣고 뺄 수 있는 구조이다.</li>
+<li>마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out(LIFO)라고도 한다.</li>
+</ul>
+<h3 id="3-1-Stack의-주요-메소드"><a href="#3-1-Stack의-주요-메소드" class="headerlink" title="3.1 Stack의 주요 메소드"></a><a id="link-3-1"></a>3.1 Stack의 주요 메소드</h3><ol>
+<li><strong>E push(E item)</strong><ul>
+<li>스택에 자료를 넣는 연산</li>
+</ul>
+</li>
+<li><strong>E pop()</strong><ul>
+<li>스택에서 자료를 빼는 연산</li>
+<li>return값이 있다 (C++에서는 없음)</li>
+</ul>
+</li>
+<li><strong>E peek()</strong><ul>
+<li>스택의 가장 위에 있는 자료를 보는 연산</li>
+</ul>
+</li>
+<li><strong>bool empty()</strong><ul>
+<li>스택이 비어있는지 아닌지를 알아보는 연산</li>
+</ul>
+</li>
+<li><strong>int size()</strong><ul>
+<li>스택에 저장되어있는 자료의 개수를 알아보는 연산</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-Set"><a href="#4-Set" class="headerlink" title="4. Set"></a><a id="link-4"></a>4. Set</h2><ul>
+<li>인터페이스이다.</li>
+<li>중복된 원소를 포함하지 않는다.</li>
+<li>Set을 구현한 것으로 HashSet, TreeSet, LinkedHashSet이 있다.</li>
+<li>일반적인 경우에는 HashSet을 사용하고, 순서가 중요한 경우에는 TreeSet, 입력으로 넣은 순서가 중요한 경우에는 LinkedHashSet을 사용한다.</li>
+</ul>
+<h3 id="4-1-Set의-주요-메소드"><a href="#4-1-Set의-주요-메소드" class="headerlink" title="4.1 Set의 주요 메소드"></a><a id="link-4-1"></a>4.1 Set의 주요 메소드</h3><ol>
+<li><strong>boolean add(E e)</strong><ul>
+<li>새로운 element e를 추가</li>
+</ul>
+</li>
+<li><strong>void clear()</strong><ul>
+<li>Set을 완전히 비움</li>
+</ul>
+</li>
+<li><strong>boolean contains(Object o)</strong><ul>
+<li>Object o가 들어있는지 아닌지를 판단</li>
+</ul>
+</li>
+<li><strong>boolean isEmpty()</strong><ul>
+<li>Set이 비어있는지 아닌지 판단</li>
+</ul>
+</li>
+<li><strong>boolean remove(Object o)</strong><ul>
+<li>Object o 삭제 </li>
+</ul>
+</li>
+<li><strong>int size()</strong><ul>
+<li>Set 크기 알아보기</li>
+</ul>
+</li>
+<li><strong>Object[] toArray()</strong><ul>
+<li>Array로 바꾸기</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-2-HastSet"><a href="#4-2-HastSet" class="headerlink" title="4.2 HastSet"></a><a id="link-4-2"></a>4.2 HastSet</h3><ul>
+<li>해시 테이블을 이용해서 구현되어 있다.</li>
+<li>삽입/삭제/제거 연산의 시간 복잡도가 O(1)이다.</li>
+<li>순서가 보장되지 않는다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    HashSet&lt;Integer&gt; d = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">10</span>; i&gt;=<span class="number">1</span>; i--) &#123;</span><br><span class="line">      d.add(i); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> x : d) &#123;</span><br><span class="line">      <span class="comment">// 순서를 모른다.</span></span><br><span class="line">      System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-TreeSet"><a href="#4-3-TreeSet" class="headerlink" title="4.3 TreeSet"></a><a id="link-4-3"></a>4.3 TreeSet</h3><ul>
+<li>이진 검색 트리(레드 블랙 트리)로 이루어져 있다.</li>
+<li>삽입/삭제/제거 연산의 시간 복잡도가 O(log N)이다.</li>
+<li>순서가 보장된다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    TreeSet&lt;Integer&gt; d = <span class="keyword">new</span> TreeSet&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">10</span>; i&gt;=<span class="number">1</span>; i--) &#123;</span><br><span class="line">      d.add(i); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> x : d) &#123;</span><br><span class="line">      <span class="comment">// 1 2 3 4 5 6 7 8 9 10</span></span><br><span class="line">      System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-LinkedHashSet"><a href="#4-4-LinkedHashSet" class="headerlink" title="4.4 LinkedHashSet"></a><a id="link-4-4"></a>4.4 LinkedHashSet</h3><ul>
+<li>해시테이블과 연결리스트를 이용해서 구현되어 있다.</li>
+<li>삽입/삭제/제거 연산의 시간 복잡도가 O(1)이다.</li>
+<li>추가한 순서가 보장된다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    LinkedHashSet&lt;Integer&gt; d = <span class="keyword">new</span> LinkedHashSet&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">10</span>; i&gt;=<span class="number">1</span>; i--) &#123;</span><br><span class="line">      d.add(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> x : d) &#123;</span><br><span class="line">      <span class="comment">// 10 9 8 7 6 5 4 3 2 1</span></span><br><span class="line">      System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-Map"><a href="#5-Map" class="headerlink" title="5. Map"></a><a id="link-5"></a>5. Map</h2><ul>
+<li>인터페이스이다.</li>
+<li>중복된 Key를 포함하지 않는다.</li>
+<li>Key-Value 쌍을 이룬다. (사전과 비슷)</li>
+<li>Map을 구현한 것으로 HashMap, TreeMap, LinkedHashMap이 있다.</li>
+</ul>
+<h3 id="5-1-Map의-주요-메소드"><a href="#5-1-Map의-주요-메소드" class="headerlink" title="5.1 Map의 주요 메소드"></a><a id="link-5-1"></a>5.1 Map의 주요 메소드</h3><ol>
+<li>void clear()<ul>
+<li>Map을 완전히 비움</li>
+</ul>
+</li>
+<li>boolean containsKey(Object key)<ul>
+<li>key가 들어있는지 아닌지 확인</li>
+</ul>
+</li>
+<li>boolean containsValue(Object value)<ul>
+<li>어떤 value를 가지고있는지 아닌지를 확인</li>
+</ul>
+</li>
+<li>Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()<ul>
+<li>Key-Value 쌍을 이용한 Set을 만들어줌</li>
+</ul>
+</li>
+<li>V get(Object key)<ul>
+<li>Key를 넣으면 Key에 해당하는 Value 리턴</li>
+</ul>
+</li>
+<li>boolean isEmpty()<ul>
+<li>Map이 비어있는지 아닌지 판단</li>
+</ul>
+</li>
+<li>Set<K> keySet()<ul>
+<li>Key를 이용해서 만든 Set을 만들어줌</li>
+</ul>
+</li>
+<li>V put(K key, V value)<ul>
+<li>Key에 해당하는 Value를 넣음</li>
+</ul>
+</li>
+<li>boolean remove(Object o)<ul>
+<li>Object o 삭제 </li>
+</ul>
+</li>
+<li>int size()<ul>
+<li>Map의 크기 알아보기</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-Queue"><a href="#6-Queue" class="headerlink" title="6. Queue"></a><a id="link-6"></a>6. Queue</h2><ul>
+<li>한쪽 끝에만 자료를 넣고 다른 한쪽 끝에서만 뺄 수 있는 자료구조.</li>
+<li>먼저 넣은 것이 가장 먼저 나오기 때문에 First In First Out(FIFO)라고도 한다.</li>
+<li>인터페이스이다.</li>
+<li>구현한 클래스로는 ArrayDeque, LinkedList, PriorityQueue가 있다.</li>
+<li>뒤에 무슨 데이터가 있는지 알아보는 메소드는 존재하지 않는다. 중요하지 않기 때문이다.</li>
+</ul>
+<h3 id="6-1-Queue의-주요-메소드"><a href="#6-1-Queue의-주요-메소드" class="headerlink" title="6.1 Queue의 주요 메소드"></a><a id="link-6-1"></a>6.1 Queue의 주요 메소드</h3><ol>
+<li><strong>boolean offer(E e)</strong><ul>
+<li>큐에 자료를 넣는 연산(push)</li>
+</ul>
+</li>
+<li><strong>E poll()</strong><ul>
+<li>큐에서 자료를 빼는 연산(pop)</li>
+<li>return값이 있다 (C++에서는 없음)</li>
+</ul>
+</li>
+<li><strong>E peek()</strong><ul>
+<li>큐의 가장 앞에 있는 자료를 보는 연산</li>
+</ul>
+</li>
+<li><strong>bool isEmpty()</strong><ul>
+<li>큐가 비어있는지 아닌지를 알아보는 연산</li>
+</ul>
+</li>
+<li><strong>int size()</strong><ul>
+<li>큐에 저장되어있는 자료의 개수를 알아보는 연산</li>
+</ul>
+</li>
+</ol>
+<h3 id="6-2-PriorityQueue"><a href="#6-2-PriorityQueue" class="headerlink" title="6.2 PriorityQueue"></a><a id="link-6-2"></a>6.2 PriorityQueue</h3><ul>
+<li>우선 순위 큐라고 한다.</li>
+<li>큐에 들어있는 아이템들 중 우선순위가 높은 아이템부터 pop이 된다.</li>
+<li>최대 힙이나 최소 힙으로 구현하게 되는 경우가 많다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//최소 힙을 구하는 소스</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    PriorityQueue&lt;Integer&gt; q = <span class="keyword">new</span> PriorityQueue&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    <span class="keyword">while</span> (n-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">int</span> x = sc.nextInt();</span><br><span class="line">      <span class="keyword">if</span> (x == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (q.isEmpty()) &#123;</span><br><span class="line">          System.out.println(<span class="number">0</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          System.out.println(q.poll());</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        q.offer(x);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-12-bj-9012/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-12-bj-9012/" class="post-title-link" itemprop="url">[백준/9012] 괄호</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:12" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-12-bj-9012/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-12-bj-9012/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/9012" target="_blank" rel="noopener">9012</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>굳이 스택으로 풀지 않아도 될 것 같은데 연습 겸 일부러 저번에 했던 스택 문제를 응용해서 풀었다.</li>
+<li>‘)’ 처리가 정말 중요했던 문제. 정말 고생 많이 했다. 17~23번 라인이 핵심인데, 만약 문자가 ‘)’인 경우 스택이 비어있지 않으면 무조건 false 처리를 한다.</li>
+<li>맞왜틀일 경우 <a href="https://www.acmicpc.net/board/view/24691" target="_blank" rel="noopener">반례</a>를 보자.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">		String s;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(n--&gt;<span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">boolean</span> isVPS = <span class="keyword">true</span>;</span><br><span class="line">			Stack stack = <span class="keyword">new</span> Stack();</span><br><span class="line">			s = sc.next();</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; s.length(); j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(s.charAt(j)==<span class="string">'('</span>) &#123;</span><br><span class="line">					stack.push(<span class="number">1</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(j)==<span class="string">')'</span>) &#123; </span><br><span class="line">					<span class="keyword">if</span>(stack.size != <span class="number">0</span>) &#123;</span><br><span class="line">						stack.pop();</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						isVPS = <span class="keyword">false</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (stack.size !=<span class="number">0</span>) &#123;</span><br><span class="line">				isVPS = <span class="keyword">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(isVPS) &#123;</span><br><span class="line">                System.out.println(<span class="string">"YES"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">"NO"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">private</span> SNode top = <span class="keyword">null</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">SNode</span> </span>&#123;</span><br><span class="line">			<span class="keyword">int</span> data;</span><br><span class="line">		    <span class="keyword">private</span> SNode next;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">			SNode node = <span class="keyword">new</span> SNode();</span><br><span class="line">			node.data = x;</span><br><span class="line">			node.next = top;</span><br><span class="line">			top = node;</span><br><span class="line">			size++;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			top = top.next;</span><br><span class="line">			size--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-13-bj-2750/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-13-bj-2750/" class="post-title-link" itemprop="url">[백준/2750] 수 정렬하기</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:16" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-13-bj-2750/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-13-bj-2750/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2750" target="_blank" rel="noopener">2750</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>무슨 정렬로 풀까 하다가 선택 정렬로 풀었다.</li>
+<li>입력 부분을 작성한 다음 선택 정렬을 구현하면 된다.</li>
+<li>선택 정렬은 O(n²) 시간복잡도를 가졌다. 기억하자.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">int</span> i, j, temp, min;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 숫자 하나씩 배열에 넣기</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      <span class="keyword">int</span> data = sc.nextInt();</span><br><span class="line">      arr[i] = data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sc.close();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">      <span class="comment">// 최솟값 초기화</span></span><br><span class="line">      min = i;</span><br><span class="line">      <span class="keyword">for</span>(j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">        <span class="comment">// 배열에서 최솟값 찾기</span></span><br><span class="line">        <span class="keyword">if</span>(arr[min] &gt; arr[j]) &#123;</span><br><span class="line">          min = j;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 값 바꾸기</span></span><br><span class="line">      temp = arr[i];</span><br><span class="line">      arr[i] = arr[min];</span><br><span class="line">      arr[min] = temp;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 출력</span></span><br><span class="line">      System.out.println(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-13-bj-10799/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-13-bj-10799/" class="post-title-link" itemprop="url">[백준/10799] 쇠막대기</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:20" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-13-bj-10799/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-13-bj-10799/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/10799" target="_blank" rel="noopener">10799</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>저번에 풀었던 괄호 <a href="https://www.acmicpc.net/problem/9012" target="_blank" rel="noopener">9012</a> 문제를 응용해서 풀면 쉽게 풀린다.</li>
+<li>포인트는 라인 23~27이다. ‘))’ 이렇게 중첩이 된 경우, 쇠파이프가 끊긴 거니 1을 더해주면 된다.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		String s;</span><br><span class="line">		s = sc.next();</span><br><span class="line"></span><br><span class="line">		Stack stack = <span class="keyword">new</span> Stack();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; s.length(); j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(s.charAt(j)==<span class="string">'('</span>) &#123;</span><br><span class="line">				stack.push(<span class="number">1</span>);</span><br><span class="line">				cnt++;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(j)==<span class="string">')'</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(stack.size != <span class="number">0</span>) &#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">					cnt--;</span><br><span class="line">					<span class="keyword">if</span>(s.charAt(j-<span class="number">1</span>)==<span class="string">'('</span>) &#123;</span><br><span class="line">						res += cnt;</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						res++;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(res);</span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">private</span> SNode top = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">SNode</span> </span>&#123;</span><br><span class="line">			<span class="keyword">int</span> data;</span><br><span class="line">		    <span class="keyword">private</span> SNode next;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">			SNode node = <span class="keyword">new</span> SNode();</span><br><span class="line">			node.data = x;</span><br><span class="line">			node.next = top;</span><br><span class="line">			top = node;</span><br><span class="line">			size++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			top = top.next;</span><br><span class="line">			size--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-14-bj-2751/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-14-bj-2751/" class="post-title-link" itemprop="url">[백준/2751] 수 정렬하기 2</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:21" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-14-bj-2751/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-14-bj-2751/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2751" target="_blank" rel="noopener">2751</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>병합 정렬로 풀었다.</li>
+<li>병합 정렬부터 조금 어려워져서 예제를 보고 풀었다.</li>
+<li>이건 참고한 <a href="https://www.youtube.com/watch?v=QAyl79dCO_k&t=295s" target="_blank" rel="noopener">동영상과 예제</a>. 아직 갈 길이 멀다.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] temp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">    mergeSort(arr, temp, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span>[] temp, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//반으로 나눠서</span></span><br><span class="line">    <span class="keyword">if</span>(start &lt; end) &#123;</span><br><span class="line">      <span class="keyword">int</span> mid = (start + end) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 재귀 호출</span></span><br><span class="line">      mergeSort(arr, temp, start, mid);</span><br><span class="line">      mergeSort(arr, temp, mid + <span class="number">1</span>, end);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 쪼갠 다음에 병합</span></span><br><span class="line">      merge(arr, temp, start, mid, end);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span>[] temp, <span class="keyword">int</span> start, <span class="keyword">int</span> mid, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 임시 배열에 넣음</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= end; i++) &#123;</span><br><span class="line">      temp[i] = arr[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> part1 = start;</span><br><span class="line">    <span class="keyword">int</span> part2 = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> index = start;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 두 개의 배열을 모두 돌 때까지</span></span><br><span class="line">    <span class="keyword">while</span> (part1 &lt;= mid &amp;&amp; part2 &lt;= end) &#123;</span><br><span class="line">      <span class="comment">// 비교해서 arr에 삽입</span></span><br><span class="line">      <span class="keyword">if</span>(temp[part1] &lt;= temp[part2]) &#123;</span><br><span class="line">        arr[index] = temp[part1];</span><br><span class="line">        part1++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        arr[index] = temp[part2];</span><br><span class="line">        part2++;</span><br><span class="line">      &#125;</span><br><span class="line">      index++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 뒤쪽 배열은 비였고, 앞쪽 배열에 데이터가 남아있는 경우</span></span><br><span class="line">    <span class="comment">// 앞쪽 포인터가 배열의 끝에서 남은 만큼을 돌면서</span></span><br><span class="line">    <span class="comment">// 최종적으로 저장할 배열에 남은 값들을 붙여줌</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= mid-part1; i++) &#123;</span><br><span class="line">      arr[index + i] = temp[part1 + i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      arr[i] = sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    mergeSort(arr);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      System.out.println(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    sc.close();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-12-bj-2292/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-12-bj-2292/" class="post-title-link" itemprop="url">[백준/2292] 벌집</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:08" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-12-bj-2292/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-12-bj-2292/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/2292" target="_blank" rel="noopener">2292</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>벌집은 ‘1-7-19-37…’ 즉, 6의 배수만큼 더해저 늘어난다.</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> input = sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span> six = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> room = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">		sc.close();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 6의 배수씩 늘어나다 input보다 커질 경우 멈춤</span></span><br><span class="line">		<span class="keyword">while</span> (room &lt; input) &#123;</span><br><span class="line">			<span class="comment">// 6의 배수만큼 늘어남</span></span><br><span class="line">			six += <span class="number">6</span>;</span><br><span class="line">			room += six;</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 6씩 늘어날 때마다 1을 더함</span></span><br><span class="line">			count ++;	</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://seonghui.github.io/2020/01/20/2018-09-16-bj-4344/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/20/2018-09-16-bj-4344/" class="post-title-link" itemprop="url">[백준/4344] 평균은 넘겠지</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2020-01-20 10:36:24 / Updated at: 16:06:25" itemprop="dateCreated datePublished" datetime="2020-01-20T10:36:24+09:00">2020-01-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%EB%B0%B1%EC%A4%80/" itemprop="url" rel="index">
+                    <span itemprop="name">백준</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/20/2018-09-16-bj-4344/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/20/2018-09-16-bj-4344/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Baekjoon Online Judge - <a href="https://www.acmicpc.net/problem/4344" target="_blank" rel="noopener">4344</a></p>
+</blockquote>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><ul>
+<li>일단 평균을 먼저 구하기</li>
+<li>배열 요소들이 평균보다 크면 count 증가</li>
+<li>count / m * 100 값 출력</li>
+<li>푸는 데에 10분 입력 부분 고치는 데에 1시간 걸렸다</li>
+<li>자바로 형변환하는 게 아직 어색하다</li>
+<li>입력 받는 건 아직도 어렵다</li>
+<li>쉬운 문제인 줄 알았는데 여러모로 반성하게 되는 문제</li>
+</ul>
+<h2 id="Code-JAVA"><a href="#Code-JAVA" class="headerlink" title="Code (JAVA)"></a>Code (JAVA)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">    <span class="keyword">double</span> arr[];</span><br><span class="line">    <span class="keyword">int</span> count, m;</span><br><span class="line">    <span class="keyword">double</span> res, sum, avg;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      m = sc.nextInt();</span><br><span class="line">      arr = <span class="keyword">new</span> <span class="keyword">double</span>[m];</span><br><span class="line"></span><br><span class="line">      sum = <span class="number">0</span>;</span><br><span class="line">      count = <span class="number">0</span>;</span><br><span class="line">      res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++) &#123;</span><br><span class="line">        arr[j] = sc.nextInt();</span><br><span class="line">        sum += arr[j];</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      avg = sum / m;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; arr.length; k++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(avg &lt; arr[k]) &#123;</span><br><span class="line">          count++;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      res = (<span class="keyword">double</span>) count / m * <span class="number">100</span>;</span><br><span class="line">      System.out.printf(<span class="string">"%.3f"</span>, res);</span><br><span class="line">      System.out.println(<span class="string">"%"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Stella</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Seonghui" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Seonghui" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stellashyou@gmail.com" title="E-Mail → mailto:stellashyou@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stella</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://stelladevlog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+</body>
+</html>
